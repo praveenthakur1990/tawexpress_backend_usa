@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 19-09-2021 9.56.45 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Login failed for user 'sa'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 19-09-2021 9.58.15 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Login failed for user 'sa'.)
+--------------------------------*End*------------------------------------------

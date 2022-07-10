@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 22-11-2021 12.16.39 AM
+Error in GetBannerImage method(id=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, bannerType=, connectionStr=, exception=Invalid object name 'dbo.tb_BannerImages'.)
+--------------------------------*End*------------------------------------------

@@ -1,0 +1,61 @@
+﻿@model SuperSmartShopping.DAL.ViewModels.StockModel
+@{
+    ViewBag.Title = "AddStock";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts{
+    <script src="~/Content/project/stock.js"></script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>Add Stock</h1>
+                <p>Please fill all the required fields<span>(*)</span></p>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddStock" class="form-horizontal">
+                @Html.HiddenFor(c => c.Id)
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Category</label>
+                    <div class="col-sm-8">
+                        <label>@Model.ProductInfo.CategoryName</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Sub Category</label>
+                    <div class="col-sm-8">
+                        <label>@Model.ProductInfo.SubCategoryName</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Brand</label>
+                    <div class="col-sm-8">
+                        <label>@Model.ProductInfo.BrandName</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Unit Measurement</label>
+                    <div class="col-sm-8">
+                        <label>@Model.ProductInfo.UnitMeasurementName</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Quantity</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control numbers-only" id="Quantity" name="Quantity" placeholder="Enter  Quantity" value="@Model.Quantity" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="submitBtn mr-5" type="button" onclick="addStock()">Save</button>
+                        <button class="cancelBtn" type="button" onclick="window.location.href='@Url.Action("Index","Inventory",new {area="admin",@id=Model.ProductInfo.Id })'">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

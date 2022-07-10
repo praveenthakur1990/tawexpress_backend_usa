@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 9.23.21 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.15.13 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.24.11 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.24.17 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.24.54 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.24.54 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.25.02 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.25.34 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.25.42 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.25.48 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-11-2021 10.26.00 PM
+Error in GetSpecialOfferDates method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Could not find stored procedure 'dbo.USPGetSpecialOfferDatesAP'.)
+--------------------------------*End*------------------------------------------

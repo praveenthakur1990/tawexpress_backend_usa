@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 23-10-2021 9.41.16 PM
+Error in AddUpdate method(frm=testnew.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 23-10-2021 9.41.16 PM
+Error in AddUpdate method(frm=https://testnew.localhost:443/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 23-10-2021 9.41.16 PM
+Error in AddUpdate method(frm=https://testnew.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 23-10-2021 9.44.01 PM
+Error in GetOrder method(orderId=0, orderNo=, orderBy=, status=False, IsCurrentDate=SuperSmartShopping.DAL.ViewModels.PaginationModel, pageModel=Data Source=DESKTOP-436157I;Initial Catalog=testetst_637706220772419003_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, connectionStr=, exception=Procedure or function USPGetOrderList has too many arguments specified.)
+--------------------------------*End*------------------------------------------

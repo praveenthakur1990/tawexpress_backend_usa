@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 7/10/2021 4:59:28 PM
+Error in GetCategories method(type=, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=teststore_637607614853762120_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Invalid object name 'dbo.tb_MenuItem'.)
+--------------------------------*End*------------------------------------------

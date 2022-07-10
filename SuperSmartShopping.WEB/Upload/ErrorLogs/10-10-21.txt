@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 10-10-2021 10.44.31 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=haryanastore_637648153171055059_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Cannot open database "haryanastore_637648153171055059_TE" requested by the login. The login failed.
+Login failed for user 'sa'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 10-10-2021 10.44.49 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=ramastore_637648126277770600_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Cannot open database "ramastore_637648126277770600_TE" requested by the login. The login failed.
+Login failed for user 'sa'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 10-10-2021 10.46.20 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=haryanastore_637648153171055059_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Cannot open database "haryanastore_637648153171055059_TE" requested by the login. The login failed.
+Login failed for user 'sa'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 10-10-2021 10.47.00 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=haryanastore_637648153171055059_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Cannot open database "haryanastore_637648153171055059_TE" requested by the login. The login failed.
+Login failed for user 'sa'.)
+--------------------------------*End*------------------------------------------

@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/theme/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/theme/css/animate.css" rel="stylesheet" />
+    <link href="~/Content/theme/css/style.css" rel="stylesheet" />
+    <link href="~/Content/theme/css/toastr.css" rel="stylesheet" />
+    <link href="~/Content/theme/plugins/dataTables/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content/theme/plugins/iCheck/custom.css" rel="stylesheet" />
+    <link href="~/Content/theme/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+    <!--..google font..-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    @{
+        var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+        var actionName = this.ViewContext.RouteData.Values["action"].ToString();
+    }
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side sidenav" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu sideNavList" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" style="width:100px" height="100px" class="img-circle" src="@Url.Content(@ViewBag.LogoImg)" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">@SuperSmartShopping.DAL.Common.SessionManager.LoginResponse.UserName</strong>
+                                    </span>
+                                    <span class="text-xs block">@SuperSmartShopping.DAL.Common.SessionManager.LoginResponse.RoleName <b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu fadeInRight m-t-xs">
+                                <li><a href="@Url.Action("Index","Setting",new {area="admin" })">Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@Url.Action("ChangePassword","Setting",new {area="admin" })">Change Password</a></li>
+                                <li class="divider"></li>
+                                <li><a href="javascript:void();" onclick="logout()">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li class="@(controllerName=="Dashboard"? "active":"")">
+                        <a href="@Url.Action("Index","Dashboard",new {area="admin" })">
+                            <i class="sm-dashbaord"></i> <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="Order"? "active":"")">
+                        <a href="@Url.Action("Index","Order",new {area="admin" })">
+                            <i class="sm-dashbaord"></i> <span class="nav-label">Order</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="Category" ? "active":"")">
+                        <a href="@Url.Action("Index","Category",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Catgeory</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="SubCategory" ? "active":"")">
+                        <a href="@Url.Action("Index","SubCategory",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Sub Catgeory</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="Product" ? "active":"")">
+                        <a href="@Url.Action("Index","Product",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Product</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="ProductVarient" ? "active":"")">
+                        <a href="@Url.Action("Index","ProductVarient",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Product Varient</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="Brand" ? "active":"")">
+                        <a href="@Url.Action("Index","Brand",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Brand</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="UnitMeasurement" ? "active":"")">
+                        <a href="@Url.Action("Index","UnitMeasurement",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Unit Measurement</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="WeeklyCircular" && actionName=="Index" ? "active":"")">
+                        <a href="@Url.Action("Index","WeeklyCircular",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Weekly Circular</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="WeeklyCircular" && actionName=="Subscriber" ? "active":"")">
+                        <a href="@Url.Action("Subscriber","WeeklyCircular",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Subscriber</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="SpecialOffer" ? "active":"")">
+                        <a href="@Url.Action("Index","SpecialOffer",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Special Offer</span>
+                        </a>
+                    </li>
+                    <li class="@(controllerName=="Setting" ? "active":"")">
+                        <a href="@Url.Action("Index","Setting",new {area="admin" })">
+                            <i class="sm-fine-dining"></i> <span class="nav-label">Setting</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2" href="#"><i style="font-size: 23px; color: #000000;" class="sm-menu"></i> </a>
+                        <!--<form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>-->
+                    </div>
+                </nav>
+            </div>
+            <div class="wrapper wrapper-content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <!-- Mainly scripts -->
+    <script src="~/Content/theme/js/jquery-2.1.1.js"></script>
+    <script src="~/Content/theme/js/jquery.validate.min.js"></script>
+    <script src="~/Content/theme/js/bootstrap.min.js"></script>
+    <script src="~/Content/theme/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/Content/theme/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="~/Content/theme/js/inspinia.js"></script>
+    <script src="~/Content/theme/js/toastr.js"></script>
+    <script src="~/Content/theme/plugins/dataTables/datatables.min.js"></script>
+    <script src="~/Content/theme/plugins/iCheck/icheck.min.js"></script>
+    <script src="~/Content/theme/js/jquery-input-mask-phone-number.js"></script>
+    <script src="~/Content/theme/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/Content/theme/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
+    <script src="~/Content/project/common.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+<!-- Modal -->
+<div class="modal fade" id="viewOrderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="orderTitle">
+                    Order Details
+                    <span aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close">X</span>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addWeeklyCircularProducts" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="orderTitle">
+                    Add/Update Product
+                    <span aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close">X</span>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="weeklyCircularComposeMsg" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="orderTitle">
+                    Send Weekly Circular Message
+                    <span aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close">X</span>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="addBannerModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="orderTitle">
+                    Add Banner Images
+                    <span aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close">X</span>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+
+            </div>
+        </div>
+    </div>
+</div>

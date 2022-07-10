@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 27-02-2022 11.02.08 PM
+Error in GetRiders method(id=0, model={"PageNumber":1,"PageSize":10000,"SearchStr":""}, exception=Object cannot be cast from DBNull to other types.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 27-02-2022 11.03.18 PM
+Error in GetRiders method(id=0, model={"PageNumber":1,"PageSize":10000,"SearchStr":""}, exception=Object cannot be cast from DBNull to other types.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 27-02-2022 11.06.17 PM
+Error in GetRiders method(id=0, model={"PageNumber":1,"PageSize":10000,"SearchStr":""}, exception=Object cannot be cast from DBNull to other types.)
+--------------------------------*End*------------------------------------------

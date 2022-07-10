@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2021 8.33.23 PM
+Error in Get method(id=0, model={"PageNumber":1,"PageSize":10,"SearchStr":null}, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=DeletedDate)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2021 8.35.43 PM
+Error in Get method(id=0, model={"PageNumber":1,"PageSize":10,"SearchStr":null}, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=DeletedDate)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2021 8.36.48 PM
+Error in Get method(id=0, model={"PageNumber":1,"PageSize":10,"SearchStr":null}, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=DeletedDate)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 05-11-2021 8.38.02 PM
+Error in Get method(id=0, model={"PageNumber":1,"PageSize":10,"SearchStr":null}, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=DeletedDate)
+--------------------------------*End*------------------------------------------

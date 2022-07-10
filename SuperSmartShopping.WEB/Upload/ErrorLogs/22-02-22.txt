@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 12.50.12 AM
+Error in AddUpdateRider method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 12.54.09 AM
+Error in AddUpdateRider method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 9.07.43 PM
+Error in AddUpdateRider method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 9.07.45 PM
+Error in AddUpdate method(model={"Id":3,"FirstName":"Praveen","LastName":"Singh","Mobile":"(987) 669-3766","EmailAddress":"praveen@yopmail.com","Gender":"M","ContactAddress":"438 Seymour Street, Vancouver, BC, Canada","City":"Vancouver","State":"British Columbia","ZipCode":"V6B 6H4","Latitude":null,"Longitude":null,"IsActive":null,"IsOnline":null,"CreatedDate":null,"CreatedBy":"ce7d830f-0eb0-4ac7-9801-5a974006f333","UpdatedDate":null,"UpdatedBy":null,"IsDeleted":null,"DeletedDate":null,"StoreIds":"91166e49-f413-4880-a744-7aa31d1824d9","StoreIdList":[{"RiderId":0,"StoreId":"91166e49-f413-4880-a744-7aa31d1824d9"}],"StoreIdTable":[{"RiderId":0,"StoreId":"91166e49-f413-4880-a744-7aa31d1824d9"}],"TotalRows":0}, exception=The connection was not closed. The connection's current state is open.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 9.07.56 PM
+Error in AddUpdate method(model={"Id":3,"FirstName":"Praveen","LastName":"Singh","Mobile":"(987) 669-3766","EmailAddress":"praveen@yopmail.com","Gender":"M","ContactAddress":"438 Seymour Street, Vancouver, BC, Canada","City":"Vancouver","State":"British Columbia","ZipCode":"V6B 6H4","Latitude":null,"Longitude":null,"IsActive":null,"IsOnline":null,"CreatedDate":null,"CreatedBy":"ce7d830f-0eb0-4ac7-9801-5a974006f333","UpdatedDate":null,"UpdatedBy":null,"IsDeleted":null,"DeletedDate":null,"StoreIds":"91166e49-f413-4880-a744-7aa31d1824d9","StoreIdList":[{"RiderId":0,"StoreId":"91166e49-f413-4880-a744-7aa31d1824d9"}],"StoreIdTable":[{"RiderId":0,"StoreId":"91166e49-f413-4880-a744-7aa31d1824d9"}],"TotalRows":0}, exception=The ConnectionString property has not been initialized.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 9.09.57 PM
+Error in AddUpdate method(model={"Id":3,"FirstName":"Praveen","LastName":"Singh","Mobile":"(987) 669-3766","EmailAddress":"praveen@yopmail.com","Gender":"M","ContactAddress":"438 Seymour Street, Vancouver, BC, Canada","City":"Vancouver","State":"British Columbia","ZipCode":"V6B 6H4","Latitude":null,"Longitude":null,"IsActive":null,"IsOnline":null,"CreatedDate":null,"CreatedBy":"ce7d830f-0eb0-4ac7-9801-5a974006f333","UpdatedDate":null,"UpdatedBy":null,"IsDeleted":null,"DeletedDate":null,"StoreIds":"91166e49-f413-4880-a744-7aa31d1824d9","StoreIdList":[{"RiderId":0,"StoreId":"91166e49-f413-4880-a744-7aa31d1824d9"}],"StoreIdTable":[{"RiderId":0,"StoreId":"91166e49-f413-4880-a744-7aa31d1824d9"}],"TotalRows":0}, exception=Object reference not set to an instance of an object.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 9.43.41 PM
+Error in AddUpdateRider method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 22-02-2022 9.55.14 PM
+Error in GetRiders method(id=0, model={"PageNumber":1,"PageSize":10,"SearchStr":""}, exception=The connection was not closed. The connection's current state is open.)
+--------------------------------*End*------------------------------------------

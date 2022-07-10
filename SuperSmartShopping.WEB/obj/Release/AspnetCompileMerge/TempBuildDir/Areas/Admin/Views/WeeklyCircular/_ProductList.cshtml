@@ -1,0 +1,27 @@
+﻿
+<div class="form-group">
+    <label class="col-sm-2 control-label">Select Category<span class="asterisk">*</span></label>
+    <div class="col-sm-4">
+        <select id="CategoryId" name="CategoryId" class="form-control" onchange="bindSubcategories(this)">
+            <option value="">Select Category</option>
+            @foreach (var plan in ViewBag.Categories)
+            {
+                <option value="@plan.Value" @(Model.CategoryId == Convert.ToInt32(plan.Value) ? "selected" : "")>@plan.Text</option>
+            }
+        </select>
+    </div>
+    <label class="col-sm-2 control-label">Select Sub Category<span class="asterisk">*</span></label>
+    <div class="col-sm-4">
+        <select id="SubCategoryId" name="SubCategoryId" class="form-control" onchange="bindProducts(this)">
+            <option value="">Select Category First</option>
+            @foreach (var plan in ViewBag.SubCategories)
+            {
+                <option value="@plan.Value" @(Model.SubCategoryId == Convert.ToInt32(plan.Value) ? "selected" : "")>@plan.Text</option>
+            }
+        </select>
+    </div>
+</div>
+
+<div id="loadProducts">
+
+</div>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SuperSmartShopping.DAL.Models.SocialMedia>
+@{
+    ViewBag.Title = "AddUpdateSocialMediaLinks";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <script src="~/Content/project/socialMediaLink.js"></script>
+}
+<div class="row pageTitle">
+    <div class="col-lg-12">
+        <h1>Setting</h1>
+        <p>This page allow you to add social media links</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox-content settingSideNav">
+                    @{Html.RenderPartial("_SettingMenu");}
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="ibox-content wrapperPadding">
+                    <form id="frmAddUpdateSocialMedia" class="form-horizontal">
+                        <div class="profilViewBottom">
+                            <h2 class="formHeading">Social Media Link</h2>
+                            <p>Connect your social media links</p>
+                        </div>
+                        @foreach (var item in Model)
+                        {
+                            <div class="form-group socialMediaLink socialMargin" data-content="@item.Id">
+                                <input type="hidden" name="name_@item.Id" value="@item.Name" />
+                                <div class="col-lg-2">
+                                    <label data-content="@item.Icon"><i class="@item.Icon" style="font-size: 30px; position: relative; top: 10px;"></i></label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control validate" id="link_@item.Id" name="link_@item.Id" maxlength="200" autocomplete="off" value="@item.Link" placeholder="Enter @item.Name url" />
+                                </div>
+                                <div class="col-lg-2 text-center" style="padding:8px 0px 0px 0px" ;>
+                                    <label class="switch">
+                                        <input type="checkbox" class="" id="IsActive_@item.Id" name="IsActive_@item.Id" value="@item.IsActive" @(item.IsActive == true ? "checked" : "") />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        }
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="submitBtn mr-5" type="button" onclick="saveSocialLinks()">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

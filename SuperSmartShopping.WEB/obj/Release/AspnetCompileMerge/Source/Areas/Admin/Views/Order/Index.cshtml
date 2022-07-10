@@ -1,0 +1,162 @@
+﻿@model IEnumerable<SuperSmartShopping.DAL.ViewModels.OrderInfoModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/project/order.js"></script>
+}
+<div class="row pageTitle">
+    <div class="col-lg-12">
+        <h1>Order List</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox-content">
+            <form id="frmSearchOrder">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="paraText">Search Order Details</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="txtSearch" name="txtSearch" placeholder="Enter Order Number, Customer Name, Order Status" value="@ViewBag.SearchStr" autocomplete="off" />
+                    </div>
+                    <div class="col-lg-1">
+                        <button class="viewButton" type="button" onclick="btnGetSearchOrder()">View</button>
+                    </div>
+                    <div class="col-lg-2">
+                        <select class="form-control riderDDL" multiple data-live-search="true">
+                            @foreach (var item in @ViewBag.RiderList)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-lg-1">
+                        <button class="viewButton" type="button" onclick="assignOrderToRider()">Assign</button>
+                    </div>
+                </div>
+            </form>
+            <table class="orderMargin table-responsive footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Order No</th>
+                        <th data-hide="phone">Customer</th>
+                        <th data-hide="phone">Order Date</th>
+                        <th data-hide="phone">Mobile Number</th>
+                        <th data-hide="phone">Ordered Amount</th>
+                        <th data-hide="phone">Ordered Type</th>
+                        <th data-hide="phone">Is Send Rider Request</th>
+                        <th data-hide="phone">Rider</th>
+                        <th data-hide="phone">Status</th>
+                        <th class="text-right">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count() > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (item.RiderInfo.IsRequestSent == true)
+                                    {
+                                        <input type="checkbox" checked disabled="disabled" class="form-control" />
+                                    }
+                                    else
+                                    {
+                                        if (item.OrderType != "S" && item.Status == "A")
+                                        {
+                                            <input type="checkbox" class="form-control" value="@item.OrderId" />
+                                        }
+                                    }
+
+                                </td>
+                                <td>@item.OrderNo</td>
+                                <td>@(item.OrderType=="H" ? String.Format("{0} {1}", @item.FirstName, @item.LastName): String.Format("{0} {1}", @item.UserInfoModel.FirstName, @item.UserInfoModel.LastName)) </td>
+                                <td>@item.OrderedDate</td>
+                                <td>@item.UserInfoModel.PhoneNumber</td>
+                                <td>@ViewBag.CurrencySymbol@item.OrderDetail.Select(c => c.TotalPrice).Sum()</td>
+                                <td>@(item.OrderType=="S"? "Self PickUp": "Home Delivery")</td>
+                                <td>@(item.RiderInfo.IsRequestSent==true && item.RiderInfo.IsAccepted==true ? "Accepted" : (item.RiderInfo.IsRequestSent==true ? "Waiting from Rider end":""))</td>
+                                <td>@(item.RiderInfo.IsAccepted==true ? item.RiderInfo.FirstName:"")</td>
+                                <td>
+                                    @if (item.Status == "A")
+                                    {
+                                        <span class="label acceptedBtn">Accepted</span>
+                                    }
+                                    @if (item.Status == "O")
+                                    {
+                                        <span class="label outForDelBtn">Out for delivery</span>
+                                    }
+                                    @if (item.Status == "R")
+                                    {
+                                        <span class="label rejectedBtn mx-2">Rejected</span>
+                                    }
+                                    @if (item.Status == "D")
+                                    {
+                                        <span class="label deliveredBtn">Delivered</span>
+                                    }
+                                </td>
+                                <td class="text-right">
+                                    <div class="btn-group">
+                                        <button type="button" onclick="viewOrder('@item.OrderId')" class="listActionBtn">View</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="11">
+                                <div class="alert alert-danger text-center" role="alert">
+                                    No data found
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div>
+                @if (ViewBag.Pager.EndPage > 1)
+                {
+                    <ul class="pagination">
+                        @if (ViewBag.Pager.CurrentPage > 1)
+                        {
+                            <li>
+                                <a href="@Url.Action("Index","Order",new {area="admin", @searchStr=ViewBag.SearchStr })">First</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Order",new { area = "admin", @page =ViewBag.Pager.CurrentPage - 1, @searchStr=ViewBag.SearchStr})">Previous</a>
+                            </li>
+                        }
+
+                        @for (var page = ViewBag.Pager.StartPage; page <= ViewBag.Pager.EndPage; page++)
+                        {
+                            <li class="@(page == ViewBag.Pager.CurrentPage ? "active" : "")">
+                                <a href="@Url.Action("Index","Order",new { area = "admin", @page =page, @searchStr=ViewBag.SearchStr})">@page</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.Pager.CurrentPage < ViewBag.Pager.TotalPages)
+                        {
+                            <li>
+                                <a href="@Url.Action("Index","Order",new { area = "admin", @page =ViewBag.Pager.CurrentPage + 1, @searchStr=ViewBag.SearchStr})">Next</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Order",new { area = "admin", @page =ViewBag.Pager.TotalPages, @searchStr=ViewBag.SearchStr})">Last</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

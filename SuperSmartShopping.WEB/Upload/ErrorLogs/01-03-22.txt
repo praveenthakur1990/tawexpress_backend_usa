@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 01-03-2022 1.32.01 PM
+Error in GetOrder method(orderId=0, orderNo=, orderBy=, status=False, IsCurrentDate=SuperSmartShopping.DAL.ViewModels.PaginationModel, pageModel=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, connectionStr=, exception=IsRequestSent)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 01-03-2022 1.33.03 PM
+Error in GetOrder method(orderId=0, orderNo=, orderBy=, status=False, IsCurrentDate=SuperSmartShopping.DAL.ViewModels.PaginationModel, pageModel=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, connectionStr=, exception=IsRequestSent)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 01-03-2022 1.43.59 PM
+Error in GetOrder method(orderId=0, orderNo=, orderBy=, status=False, IsCurrentDate=SuperSmartShopping.DAL.ViewModels.PaginationModel, pageModel=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, connectionStr=, exception=IsRequestSent)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 01-03-2022 1.59.44 PM
+Error in AddUpdateRider method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 01-03-2022 9.59.27 PM
+Error in GetRiderOrders method(userName=9876693766, type=, model=null, exception=Object reference not set to an instance of an object.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 01-03-2022 10.44.12 PM
+Error in GetRiderOrders method(userName=9876693766, type=, model={"PageNumber":0,"PageSize":0,"SearchStr":null}, exception=The parameterized query '(@UserName nvarchar(10),@Type nvarchar(4000),@PageNumber int,@Pa' expects the parameter '@Type', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 01-03-2022 10.44.39 PM
+Error in GetRiderOrders method(userName=9876693766, type=, model={"PageNumber":0,"PageSize":0,"SearchStr":null}, exception=The parameterized query '(@UserName nvarchar(10),@Type nvarchar(4000),@PageNumber int,@Pa' expects the parameter '@Type', which was not supplied.)
+--------------------------------*End*------------------------------------------

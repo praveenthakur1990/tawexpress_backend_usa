@@ -1,0 +1,45 @@
+﻿@model SuperSmartShopping.DAL.ViewModels.WeeklyCircularCatInfoModel
+<div class="row">
+    <div class="col-lg-12">
+        <form id="frmAddUpdateWeeklyCircularProduct" class="form-horizontal">
+            @Html.HiddenFor(m => m.WeeklyCircularCatId)
+            @Html.HiddenFor(m => m.WeeklyCircularId)
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Category<span class="asterisk">*</span></label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="categoryId" id="categoryId" onchange="bindSubcategories(this)">
+                        <option value="">Select</option>
+                        @foreach (var cat in Model.Categories)
+                        {
+                            <option value="@cat.Id" @(Model.CategoryId == cat.Id ? "selected" : "")>@cat.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Sub Category<span class="asterisk">*</span></label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="SubCategoryId" id="SubCategoryId" onchange="bindProducts(this)">
+                        <option value="">Select</option>
+                        @if (Model.SubCategories != null && Model.SubCategories.Count() > 0)
+                        {
+                            foreach (var cat in Model.SubCategories)
+                            {
+                                <option value="@cat.Id" @(Model.SubCategoryId == cat.Id ? "selected" : "")>@cat.Name</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div id="loadProducts">
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <button class="submitBtn mr-5" type="button" onclick="addUpdateProduct()">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

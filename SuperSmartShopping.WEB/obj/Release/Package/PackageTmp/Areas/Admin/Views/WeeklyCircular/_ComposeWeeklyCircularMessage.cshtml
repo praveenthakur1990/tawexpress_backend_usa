@@ -1,0 +1,38 @@
+﻿@model SuperSmartShopping.WEB.Areas.Admin.Controllers.WeeklyCircularCompose
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox-content wrapperPadding">
+            <form id="frmWeeklyCircularCompose" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Select<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="ddlSubscriber" name="ddlSubscriber" multiple>
+                            @foreach (var subs in Model.SubscriberList)
+                            {
+                                <option value="@subs.Id">@subs.FullName (@subs.MobileNumber)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Message<span class="asterisk">*</span></label>
+                    <div class="col-sm-8 summernote">
+                        <textarea class="form-control" name="message" id="message" maxlength="500">@Model.DefaultMsg</textarea>
+                        <span>(max 500 character allowed)</span>
+                        <br />
+                        <a href="@Model.CallBackUrl" target="_blank">Weekly Circular link</a>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="submitBtn mr-5" type="button" onclick="sendWeeklyCircularMsg()">Send</button>
+                        <button class="cancelBtn" type="button" onclick="window.location.href='@Url.Action("Subscriber","WeeklyCircular",new {area="admin" })'">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

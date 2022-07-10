@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 08-10-2021 11.14.08 AM
+Error in AddUpdate method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Must declare the scalar variable "@CategoryId".)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 08-10-2021 1.39.23 PM
+Error in AddUpdateProduct method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularCatInfoModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Trying to pass a table-valued parameter with 6 column(s) where the corresponding user-defined table type requires 3 column(s).)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 08-10-2021 1.43.13 PM
+Error in AddUpdateProduct method(model={"WeeklyCircularCatId":0,"WeeklyCircularId":2,"CategoryId":1,"SubCategoryId":11,"Categories":null,"CreatedBy":"91166e49-f413-4880-a744-7aa31d1824d9","ProductList":[{"Id":0,"WeeklyCircularId":0,"WeeklyCircularCatId":0,"ProductId":1,"OfferType":"0","OfferValue":2.0},{"Id":0,"WeeklyCircularId":0,"WeeklyCircularCatId":0,"ProductId":2,"OfferType":"2","OfferValue":2.3}],"ProductListDataTable":[{"Id":0,"WeeklyCircularId":0,"WeeklyCircularCatId":0,"ProductId":1,"OfferType":"0","OfferValue":2.0},{"Id":0,"WeeklyCircularId":0,"WeeklyCircularCatId":0,"ProductId":2,"OfferType":"2","OfferValue":2.3}]}, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Trying to pass a table-valued parameter with 6 column(s) where the corresponding user-defined table type requires 3 column(s).)
+--------------------------------*End*------------------------------------------

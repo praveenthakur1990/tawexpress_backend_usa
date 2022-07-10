@@ -1,0 +1,247 @@
+@font-face {
+    font-family: "sm-icon";
+    src: url("../../theme/fonts/sm-icon.eot");
+    src: url("../../theme/fonts/sm-icon.eot?#iefix") format("embedded-opentype"), url("../../theme/fonts/sm-icon.woff") format("woff"), url("../../theme/fonts/sm-icon.ttf") format("truetype"), url("../../theme/fonts/sm-icon.svg#sm-icon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: "sm-icon" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="sm-"]:before,
+[class*=" sm-"]:before {
+    font-family: "sm-icon" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sm-dashbaord:before {
+    content: "\61";
+}
+
+.sm-user:before {
+    content: "\62";
+}
+
+.sm-close:before {
+    content: "\63";
+}
+
+.sm-tick:before {
+    content: "\64";
+}
+
+.sm-edit-1:before {
+    content: "\65";
+}
+
+.sm-print:before {
+    content: "\66";
+}
+
+.sm-document:before {
+    content: "\67";
+}
+
+.sm-menu:before {
+    content: "\68";
+}
+
+.sm-add:before {
+    content: "\69";
+}
+
+.sm-arrow-down-sign-to-navigate:before {
+    content: "\6a";
+}
+
+.sm-back:before {
+    content: "\6b";
+}
+
+.sm-bill:before {
+    content: "\6c";
+}
+
+.sm-call:before {
+    content: "\6d";
+}
+
+.sm-coffee:before {
+    content: "\6e";
+}
+
+.sm-config:before {
+    content: "\6f";
+}
+
+.sm-cook:before {
+    content: "\70";
+}
+
+.sm-cooking:before {
+    content: "\71";
+}
+
+.sm-cooking-1:before {
+    content: "\72";
+}
+
+.sm-delete:before {
+    content: "\73";
+}
+
+.sm-dish:before {
+    content: "\74";
+}
+
+.sm-done-delivered:before {
+    content: "\75";
+}
+
+.sm-edit:before {
+    content: "\76";
+}
+
+.sm-email:before {
+    content: "\77";
+}
+
+.sm-facebook:before {
+    content: "\78";
+}
+
+.sm-fast-food:before {
+    content: "\79";
+}
+
+.sm-fine-dining:before {
+    content: "\7a";
+}
+
+.sm-instagram:before {
+    content: "\41";
+}
+
+.sm-left-arrow:before {
+    content: "\42";
+}
+
+.sm-linkedin:before {
+    content: "\43";
+}
+
+.sm-location:before {
+    content: "\44";
+}
+
+.sm-logout:before {
+    content: "\45";
+}
+
+.sm-money:before {
+    content: "\46";
+}
+
+.sm-more:before {
+    content: "\47";
+}
+
+.sm-out-delivery:before {
+    content: "\48";
+}
+
+.sm-password:before {
+    content: "\49";
+}
+
+.sm-photo:before {
+    content: "\4a";
+}
+
+.sm-play:before {
+    content: "\4b";
+}
+
+.sm-received:before {
+    content: "\4c";
+}
+
+.sm-rejected:before {
+    content: "\4d";
+}
+
+.sm-reports:before {
+    content: "\4e";
+}
+
+.sm-right:before {
+    content: "\4f";
+}
+
+.sm-right-arrow:before {
+    content: "\50";
+}
+
+.sm-search:before {
+    content: "\51";
+}
+
+.sm-setting:before {
+    content: "\52";
+}
+
+.sm-shop:before {
+    content: "\53";
+}
+
+.sm-shopping-cart:before {
+    content: "\54";
+}
+
+.sm-team:before {
+    content: "\55";
+}
+
+.sm-twitter:before {
+    content: "\56";
+}
+
+.sm-up-and-down:before {
+    content: "\57";
+}
+
+.sm-view:before {
+    content: "\58";
+}
+
+.sm-socialicon:before {
+    content: "\59";
+}
+
+.sm-file:before {
+    content: "\5a";
+}
+
+.sm-web-page:before {
+    content: "\30";
+}
+
+.sm-calendar:before {
+    content: "\31";
+}

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 23-02-2022 12.55.09 AM
+Error in GetRelatedProductByIdAPP method(productId=426, limit=4, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 23-02-2022 12.55.14 AM
+Error in GetRelatedProductByIdAPP method(productId=852, limit=4, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------

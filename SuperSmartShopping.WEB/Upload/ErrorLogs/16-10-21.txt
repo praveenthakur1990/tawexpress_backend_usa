@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.53.42 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.53.47 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.53.47 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.53.47 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.53.47 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.53.54 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.54.05 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.54.13 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-10-2021 1.54.46 PM
+Error in AddUpdateSubscriber method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularSubscriberModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@FullName nvarchar(7),@MobileNumber nvarchar(10),@OTP n' expects the parameter '@OTP', which was not supplied.)
+--------------------------------*End*------------------------------------------

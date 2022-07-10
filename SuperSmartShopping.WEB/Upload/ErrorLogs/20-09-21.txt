@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 20-09-2021 1.09.11 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name walmart@gmail.com is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 42.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 20-09-2021 1.10.24 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name walmart@gmail.com is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 42.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 20-09-2021 1.11.07 PM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=String was not recognized as a valid DateTime.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 20-09-2021 1.11.25 PM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=String was not recognized as a valid DateTime.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 20-09-2021 1.12.14 PM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=String was not recognized as a valid DateTime.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 20-09-2021 1.13.18 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name walmart@gmail.com is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 42.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 20-09-2021 1.14.11 PM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=String was not recognized as a valid DateTime.)
+--------------------------------*End*------------------------------------------

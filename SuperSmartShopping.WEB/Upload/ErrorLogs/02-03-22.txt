@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 02-03-2022 12.32.26 AM
+Error in GetOrder method(orderId=0, orderNo=, orderBy=, status=False, IsCurrentDate=SuperSmartShopping.DAL.ViewModels.PaginationModel, pageModel=Data Source=DESKTOP-436157I;Initial Catalog=keyfood_637608031400189564_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, connectionStr=, exception=Invalid attempt to call MetaData when reader is closed.)
+--------------------------------*End*------------------------------------------

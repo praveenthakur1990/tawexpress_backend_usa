@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 7/11/2021 11:37:41 PM
+Error in AddUpdateUnitMeasurement method(model={"Id":1,"Name":"Kilogram","ShortName":"KG","IsActive":null,"IsDeleted":null,"CreatedBy":"4ad519f4-ff08-4582-b820-14f5a5f7e350","CreatedDate":null,"DeletedDate":null,"UpdatedBy":null,"UpdatedDate":null}, connectionStr=Data Source=DESKTOP-29EQPJ8\SQLEXPRESS;Initial Catalog=teststroe07_637608612329434691_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Procedure or function 'USPAddUpdateUnitMeasurement' expects parameter '@Result', which was not supplied.)
+--------------------------------*End*------------------------------------------

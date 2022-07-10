@@ -1,0 +1,45 @@
+﻿@{
+    var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+    var actionName = this.ViewContext.RouteData.Values["action"].ToString();
+}
+<ul>
+    <li class="@(controllerName=="Setting" && actionName=="Index" ? "active":"")">
+        <a href="@Url.Action("Index","Setting",new {area="admin" })">
+            <i class="sm-user"></i>
+            Profile<span>Store name, contact detail, subscription plan details</span>
+        </a>
+    </li>
+    <li class="@(controllerName=="Setting" && actionName=="BusinessHour" ? "active":"")">
+        <a href="@Url.Action("BusinessHour","Setting",new {area="admin" })" class="@(controllerName=="Setting" && actionName=="BusinessHour" ? "active":"")">
+            <i class="sm-dashbaord"></i>
+            Business Hours<span>Store working hours details</span>
+        </a>
+    </li>
+    <li class="@(controllerName=="Setting" && actionName=="Configuration" ? "active":"")">
+        <a href="@Url.Action("Configuration","Setting",new {area="admin" })" class="@(controllerName=="Setting" && actionName=="Configuration" ? "active":"")">
+            <i class="sm-config"></i>
+            Configuration<span>Payment method setting, order amount</span>
+        </a>
+    </li>
+
+    <li class="@(controllerName=="Setting" && actionName=="AddUpdateQuickPages" ? "active":"")">
+        <a href="@Url.Action("AddUpdateQuickPages","Setting",new {area="admin" })" class="@(controllerName=="Setting" && actionName=="AddUpdateQuickPages" ? "active":"")">
+            <i class="sm-web-page"></i>
+            Static Pages<span>Frontend pages content</span>
+        </a>
+    </li>
+
+    <li class="@(controllerName=="Setting" && actionName=="AddUpdateSocialMediaLinks" ? "active":"")">
+        <a href="@Url.Action("AddUpdateSocialMediaLinks","Setting",new {area="admin" })" class="@(controllerName=="Setting" && actionName=="AddUpdateSocialMediaLinks" ? "active":"")">
+            <i class="sm-socialicon"></i>
+            Social Media Link<span>Store social media pages url</span>
+        </a>
+    </li>
+    <li class="@(controllerName=="Setting" && actionName=="Subscription" ? "active":"")">
+        <a href="@Url.Action("Subscription","Setting",new {area="admin" })" class="@(controllerName=="Setting" && actionName=="Subscription" ? "active":"")">
+            <i class="sm-socialicon"></i>
+            Subscription<span>Monthly, Annual subscription detail</span>
+        </a>
+    </li>
+
+</ul>

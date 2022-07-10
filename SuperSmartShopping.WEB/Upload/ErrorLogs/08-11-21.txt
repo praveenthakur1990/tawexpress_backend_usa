@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 08-11-2021 12.10.03 PM
+Error in GetProductBySpecialOfferId method(categoryId=, specialOfferId=1, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Invalid object name 'dbo.tb_SpecialOfferProducts'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 08-11-2021 12.10.12 PM
+Error in GetProductByCategoryIdAPP method(categoryId=1, subCategoryIds=11, brandIds=, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Invalid object name 'dbo.tb_SpecialOfferProducts'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 08-11-2021 12.10.13 PM
+Error in GetProductBySpecialOfferId method(categoryId=1, specialOfferId=1, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Invalid object name 'dbo.tb_SpecialOfferProducts'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 08-11-2021 12.12.13 PM
+Error in GetProductByCategoryIdAPP method(categoryId=1, subCategoryIds=11, brandIds=, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Invalid object name 'dbo.tb_SpecialOfferProducts'.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 08-11-2021 12.15.59 PM
+Error in GetProductByCategoryIdAPP method(categoryId=1, subCategoryIds=11, brandIds=, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=Invalid object name 'dbo.tb_SpecialOfferProducts'.)
+--------------------------------*End*------------------------------------------

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 26-08-2021 12.25.27 PM
+Error in GetOrder method(orderId=0, orderNo=, status=, IsCurrentDate=False, pageModel=SuperSmartShopping.DAL.ViewModels.PaginationModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=teststroe07_637608612329434691_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=TransactionDate)
+--------------------------------*End*------------------------------------------

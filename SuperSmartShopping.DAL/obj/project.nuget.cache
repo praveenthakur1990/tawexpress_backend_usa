@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "H9bHEgj6XOvX1tpF4nbad+jfN53h/Z4EvA+3LB5Wz7dwzwvu0ixL4LchpoFEKiX47t6q+ZnpvXc5oJYV7QqjeA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\TawMediaGroup\\TawExpress\\SuperSmartShoppingWEB\\SuperSmartShopping.DAL\\SuperSmartShopping.DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.identitymodel.logging\\1.1.2\\microsoft.identitymodel.logging.1.1.2.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.1.2\\microsoft.identitymodel.tokens.5.1.2.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\qrcoder\\1.4.1\\qrcoder.1.4.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.1.2\\system.identitymodel.tokens.jwt.5.1.2.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\twilio\\5.64.1\\twilio.5.64.1.nupkg.sha512"
+  ],
+  "logs": []
+}

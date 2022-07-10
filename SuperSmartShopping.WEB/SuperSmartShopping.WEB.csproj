@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56070FF4-8908-41FB-A4C5-2733B2F71ABC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperSmartShopping.WEB</RootNamespace>
+    <AssemblyName>SuperSmartShopping.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44314</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Stripe.net, Version=39.54.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Stripe.net.39.54.0\lib\net461\Stripe.net.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSmartShopping.DAL">
+      <HintPath>..\SuperSmartShopping.DAL\bin\Debug\SuperSmartShopping.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Twilio, Version=5.64.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\Twilio.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.Abstractions.5.11.1\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.Container.5.11.1\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.Mvc.5.11.1\lib\net47\Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InventoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MessageStatusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductVarientController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SettingController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SpecialOfferController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SubCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UnitMeasurementController.cs" />
+    <Compile Include="Areas\Admin\Controllers\WeeklyCircularController.cs" />
+    <Compile Include="Areas\SecurePanel\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\SecurePanel\Controllers\PartnerController.cs" />
+    <Compile Include="Areas\SecurePanel\Controllers\PlanController.cs" />
+    <Compile Include="Areas\SecurePanel\Controllers\RiderController.cs" />
+    <Compile Include="Areas\SecurePanel\Controllers\StoreController.cs" />
+    <Compile Include="Areas\SecurePanel\SecurePanelAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\img\addMoreItem.png" />
+    <Content Include="Content\img\admin_default.png" />
+    <Content Include="Content\img\backdrop-smart-menu.png" />
+    <Content Include="Content\img\backdrop-smart-menu.svg" />
+    <Content Include="Content\img\food-default-image.png" />
+    <Content Include="Content\img\header-profile.png" />
+    <Content Include="Content\img\login-image.jpeg" />
+    <Content Include="Content\img\outOfDeliveryArea.png" />
+    <Content Include="Content\img\profile_small.jpg" />
+    <Content Include="Content\img\restaurantClose.png" />
+    <Content Include="Content\img\rotating-balls-spinner.svg" />
+    <Content Include="Content\img\smart-menu-pad-logo.png" />
+    <Content Include="Content\img\sorry-closed.png" />
+    <Content Include="Content\project\basicProfile.js" />
+    <Content Include="Content\project\brand.js" />
+    <Content Include="Content\project\businessHours.js" />
+    <Content Include="Content\project\category.js" />
+    <Content Include="Content\project\common.js" />
+    <Content Include="Content\project\configuration.js" />
+    <Content Include="Content\project\login.js" />
+    <Content Include="Content\project\order.js" />
+    <Content Include="Content\project\partner.js" />
+    <Content Include="Content\project\plan.js" />
+    <Content Include="Content\project\product.js" />
+    <Content Include="Content\project\productVarients.js" />
+    <Content Include="Content\project\quickLinks.js" />
+    <Content Include="Content\project\rider.js" />
+    <Content Include="Content\project\socialMediaLink.js" />
+    <Content Include="Content\project\specialOffer.js" />
+    <Content Include="Content\project\stock.js" />
+    <Content Include="Content\project\store.js" />
+    <Content Include="Content\project\unitMeasurement.js" />
+    <Content Include="Content\project\weeklyCircular.js" />
+    <Content Include="Content\theme\css\animate.css" />
+    <Content Include="Content\theme\css\bootstrap.min.css" />
+    <Content Include="Content\theme\css\font-awesome.css" />
+    <Content Include="Content\theme\css\fonts.css" />
+    <Content Include="Content\theme\css\jquery-weekdays.css" />
+    <Content Include="Content\theme\css\jquery.datetimepicker.css" />
+    <Content Include="Content\theme\css\multiSelect.css" />
+    <Content Include="Content\theme\css\style.css" />
+    <Content Include="Content\theme\css\toastr.css" />
+    <Content Include="Content\theme\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\theme\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\theme\fonts\sm-icon.svg" />
+    <Content Include="Content\theme\js\bootstrap.min.js" />
+    <Content Include="Content\theme\js\inspinia.js" />
+    <Content Include="Content\theme\js\jquery-2.1.1.js" />
+    <Content Include="Content\theme\js\jquery-input-mask-phone-number.js" />
+    <Content Include="Content\theme\js\jquery-weekdays.js" />
+    <Content Include="Content\theme\js\jquery.datetimepicker.js" />
+    <Content Include="Content\theme\js\mutiSelect.js" />
+    <Content Include="Content\theme\js\toastr.js" />
+    <Content Include="Content\theme\plugins\bootstrap-switch\bootstrap-switch.min.css" />
+    <Content Include="Content\theme\plugins\bootstrap-switch\bootstrap-switch.min.js" />
+    <Content Include="Content\theme\plugins\chosen\chosen-sprite%402x.png" />
+    <Content Include="Content\theme\plugins\chosen\chosen-sprite.png" />
+    <Content Include="Content\theme\plugins\chosen\chosen.css" />
+    <Content Include="Content\theme\plugins\chosen\chosen.jquery.js" />
+    <Content Include="Content\theme\plugins\datapicker\bootstrap-datepicker.js" />
+    <Content Include="Content\theme\plugins\datapicker\datepicker3.css" />
+    <Content Include="Content\theme\plugins\dataTables\datatables.min.css" />
+    <Content Include="Content\theme\plugins\dataTables\datatables.min.js" />
+    <Content Include="Content\theme\plugins\iCheck\custom.css" />
+    <Content Include="Content\theme\plugins\iCheck\green%402x.png" />
+    <Content Include="Content\theme\plugins\iCheck\green.png" />
+    <Content Include="Content\theme\plugins\iCheck\icheck.min.js" />
+    <Content Include="Content\theme\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="Content\theme\plugins\slimscroll\jquery.slimscroll.js" />
+    <Content Include="Content\theme\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Content\theme\plugins\summernote\summernote-bs3.css" />
+    <Content Include="Content\theme\plugins\summernote\summernote.css" />
+    <Content Include="Content\theme\plugins\summernote\summernote.min.js" />
+    <Content Include="Content\theme\plugins\sweet-alert\sweetalert.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\SecurePanel\Views\web.config" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Shared\_LayoutSecurePanel.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Dashboard\Index.cshtml" />
+    <Content Include="Content\theme\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\theme\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\theme\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\theme\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\theme\fonts\FontAwesome.otf" />
+    <Content Include="Content\theme\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\theme\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\theme\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\theme\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\theme\fonts\sm-icon.eot" />
+    <Content Include="Content\theme\fonts\sm-icon.ttf" />
+    <Content Include="Content\theme\fonts\sm-icon.woff" />
+    <Content Include="Areas\SecurePanel\Views\Store\Index.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Partner\AddUpdatePartner.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Partner\Index.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Store\AddUpdate.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Plan\Index.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Plan\AddUpdatePlan.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\AddUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\AddUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductVarient\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductVarient\AddUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\SubCategory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\AddUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\UnitMeasurement\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UnitMeasurement\AddUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\Inventory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Inventory\AddStock.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_SettingMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\Configuration.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\BusinessHour.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\Subscription.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\AddUpdateQuickPages.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\AddUpdateSocialMediaLinks.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\_ViewOrderDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\_OrderPrint.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\AddUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\_LoadProductsBySubCat.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\_ProductList.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\ViewProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\_AddUpdateProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\Subscriber.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\_ComposeWeeklyCircularMessage.cshtml" />
+    <Content Include="Areas\Admin\Views\WeeklyCircular\MessageReport.cshtml" />
+    <Content Include="Areas\Admin\Views\SpecialOffer\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SpecialOffer\AddUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\SpecialOffer\ViewProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\SpecialOffer\_AddUpdateProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\SpecialOffer\_LoadProductsBySubCat.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\ChangePassword.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\_AddBanner.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Store\AdvertisementImage.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Store\AddAdvertisementImage.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Store\_AddBanner.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Rider\Index.cshtml" />
+    <Content Include="Areas\SecurePanel\Views\Rider\AddUpdateRider.cshtml" />
+    <None Include="Properties\PublishProfiles\superSmartShoppingBackend.pubxml" />
+    <None Include="Properties\PublishProfiles\tawexpressAdmin.pubxml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Content\theme\js\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\ForgetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Upload\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\SecurePanel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperSmartShopping.BAL\SuperSmartShopping.BAL.csproj">
+      <Project>{708DAC54-C189-4F45-A3DB-E39C4EB5436B}</Project>
+      <Name>SuperSmartShopping.BAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54081</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44314/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

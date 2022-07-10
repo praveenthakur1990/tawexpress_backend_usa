@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 21-11-2021 2.48.21 PM
+Error in GetBannerImage method(id=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, connectionStr=, exception=String was not recognized as a valid Boolean.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-11-2021 11.29.01 PM
+Error in GetProductByCategoryIdAPP method(categoryId=1, subCategoryIds=12, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Object reference not set to an instance of an object.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-11-2021 11.29.02 PM
+Error in GetProductByCategoryIdAPP method(categoryId=1, subCategoryIds=15, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Object reference not set to an instance of an object.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 21-11-2021 11.29.02 PM
+Error in GetProductByCategoryIdAPP method(categoryId=1, subCategoryIds=13, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Object reference not set to an instance of an object.)
+--------------------------------*End*------------------------------------------

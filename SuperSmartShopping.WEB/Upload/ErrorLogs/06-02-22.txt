@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 06-02-2022 9.00.20 PM
+Error in AddUpdateRider method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 06-02-2022 9.07.00 PM
+Error in AddUpdateRider method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------

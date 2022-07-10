@@ -1,0 +1,291 @@
+﻿@model SuperSmartShopping.DAL.ViewModels.StoreModel
+@{
+    ViewBag.Title = "AddUpdate";
+    Layout = "~/Areas/SecurePanel/Views/Shared/_LayoutSecurePanel.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyDpzQ5OcH6MUL5I1yFK5K7Sa5Jvy7uFvA8"></script>
+    <script src="~/Content/project/store.js"></script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>Add New Store</h1>
+                <p>Please fill all the required fields<span style="color:red">(*)</span></p>
+            </div>
+            <div class="col-lg-12 text-right">
+                <button class="btn btn-primary" onclick="window.location.href='@Url.Action("Index","Store",new {area="securepanel" })'"><i class="sm-add"></i>Back To List</button>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddUpdateStore" class="form-horizontal">
+                @Html.HiddenFor(c => c.Id)
+                @Html.HiddenFor(c => c.QrCodePath)
+                <input type="hidden" id="hdnGSTFilePath" value="@Model.GSTFilePath" />
+                <input type="hidden" id="hdnLogoFilePath" value="@Model.LogoPath" />
+                <input type="hidden" id="hdnLatitude" name="Latitude" value="@Model.Latitude" />
+                <input type="hidden" id="hdnLongitude" name="Longitude" value="@Model.Longitude" />
+                <input type="hidden" id="hdnEmailAddress" name="emailAddress" value="@Model.Email" />
+                <input type="hidden" id="hdnSubDomain" name="SubDomain" value="@ViewBag.SubDomain" />
+                <input type="hidden" id="hdnQrCodePath" name="SubDomain" value="@Model.QrCodePath" />
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Basic Details</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-6">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" maxlength="50" autocomplete="off" value="@Model.Name" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        @if (Model.Id == 0)
+                                        {
+                                            <label>Sub Domian Name</label>
+                                            <input type="text" class="form-control noSpecialChar" id="subDomainName" name="subDomainName" maxlength="50" autocomplete="off" />
+                                        }
+                                    </div>
+                                </div>
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-6">
+                                        <label>Email Address</label>
+                                        @if (Model.Id > 0)
+                                        {
+                                            <label class="form-control" id="emailAddress" name="emailAddress">@Model.Email</label>
+                                        }
+                                        else
+                                        {
+                                            <input type="text" class="form-control" id="emailAddress" name="emailAddress" maxlength="50" autocomplete="off" value="@Model.Email" />
+                                        }
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>Mobile Number</label>
+                                        <input type="text" class="form-control number-format" id="mobile" name="mobile" maxlength="15" autocomplete="off" value="@Model.Mobile" />
+                                    </div>
+                                </div>
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-6">
+                                        <label>Address1</label>
+                                        <input type="text" class="form-control" id="address" name="address" maxlength="200" autocomplete="off" value="@Model.Address" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>State</label>
+                                        <input type="text" class="form-control" id="state" name="state" maxlength="100" autocomplete="off" value="@Model.State" readonly />
+                                    </div>
+                                </div>
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-6">
+                                        <label>City</label>
+                                        <input type="text" class="form-control" id="city" name="city" maxlength="50" autocomplete="off" value="@Model.City" readonly />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>ZipCode</label>
+                                        <input type="text" class="form-control numbers-only" id="zipCode" name="zipCode" maxlength="6" autocomplete="off" value="@Model.ZipCode" />
+                                    </div>
+                                </div>
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-12">
+                                        <label>Country</label>
+                                        <input type="text" class="form-control numbers-only" id="countryCode" name="countryCode" maxlength="4" autocomplete="off" value="@Model.CountryCode" readonly />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Currency/TimeZone</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-6">
+                                        <label>Currency</label>
+                                        <select class="form-control" name="CurrencySymbol" id="CurrencySymbol">
+                                            <option value="">Select</option>
+                                            <option value="₹" @(Model.CurrencySymbol == "₹" ? "selected" : "")>India Rupiah(₹)</option>
+                                            <option value="$" @(Model.CurrencySymbol == "$" ? "selected" : "")>US Dollar($)</option>
+                                            <option value="€" @(Model.CurrencySymbol == "€" ? "selected" : "")>Euro(€)</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>TimeZone</label>
+                                        <select class="form-control" name="timeZone" id="timeZone">
+                                            <option value="">Select</option>
+                                            <option value="-10:00" @(Model.TimeZone == "-10:00" ? "selected" : "")>Hawaii Standard Time (UTC -10:00)</option>
+                                            <option value="-09:00" @(Model.TimeZone == "-09:00" ? "selected" : "")>Alaska Standard Time (UTC -09:00)</option>
+                                            <option value="-08:00" @(Model.TimeZone == "-08:00" ? "selected" : "")>Pacific Standard Time (UTC -08:00)</option>
+                                            <option value="-07:00" @(Model.TimeZone == "-07:00" ? "selected" : "")>Mountain Standard Time (UTC -07:00)</option>
+                                            <option value="-06:00" @(Model.TimeZone == "-06:00" ? "selected" : "")>Central Standard Time (UTC -06:00)</option>
+                                            <option value="-05:00" @(Model.TimeZone == "-05:00" ? "selected" : "")>Eastern Standard Time (UTC -05:00)</option>
+                                            <option value="+05:30" @(Model.TimeZone == "+05:30" ? "selected" : "")>India Standard Time (UTC +05:30)</option>
+                                            <option value="+02:00" @(Model.TimeZone == "+02:00" ? "selected" : "")>Central European Summer Time (GMT+02:00)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Contact Person Name</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-6">
+                                        <label>Person Name</label>
+                                        <input type="text" class="form-control" id="contactPersonName" name="contactPersonName" maxlength="50" autocomplete="off" value="@Model.ContactPersonName" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>Contact Number</label>
+                                        <input type="text" class="form-control number-format" id="contactNumber" name="contactNumber" maxlength="15" autocomplete="off" value="@Model.ContactNumber" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Logo</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-4">
+                                        <div class="upload-btn-wrapper">
+                                            <button class="uploadBtn">Upload item image</button>
+                                            <input type="file" id="logoImagePath" name="logoImagePath" onchange="readImage(this)" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="preview-image-logo upload-btn-wrapper" style="border: none !important; display:@(Model.LogoPath!=null && Model.LogoPath!=string.Empty ? "block":"none")">
+                                            <a id="linkUploadFilePath" href="@(Model.LogoPath!=null && Model.LogoPath!=string.Empty ? Model.LogoPath:"")" target="_blank">
+                                                <img src="@Model.LogoPath" alt="image" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Document Detail</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-12">
+                                        <label>GST Registration Number</label>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="GST" name="GST" maxlength="50" autocomplete="off" value="@Model.GSTRegistrationNumber" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="preview-image-GST" style="display:@(Model.GSTFilePath!=null && Model.GSTFilePath!=string.Empty ? "block":"none")">
+                                                    <a id="linkGSTFilePath" href="@(Model.GSTFilePath!=null && Model.GSTFilePath!=string.Empty ? Model.GSTFilePath:"")">Uploaded File</a>
+                                                </div>
+                                                <input type="file" class="form-control" id="UploadGST" name="UploadGST" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Subscription Detail</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <div class="col-lg-3 colMarginBottom">
+                                        <label>Plan Type</label>
+                                        <select class="form-control" id="activePlan" name="activePlan" onchange="getPlanCostSection(this)">
+                                            <option value="">Select</option>
+                                            <option value="Free" @(Model.ActivePlan != null && Model.ActivePlan != string.Empty ? (Model.ActivePlan == "Free" ? "Selected" : "") : "")>Free</option>
+                                            <option value="Paid" @(Model.ActivePlan != null && Model.ActivePlan != string.Empty ? (Model.ActivePlan == "Paid" ? "Selected" : "") : "")>Paid</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 colMarginBottom">
+                                        <label>Commision (%)</label>
+                                        <input type="text" class="form-control numbers-only" id="commision" name="commision" maxlength="5" value="@Model.Commision" autocomplete="off" />
+                                    </div>
+                                    <div class="col-lg-6 colMarginBottom">
+                                        <label>Plan Active Date</label>
+                                        <input type="text" class="form-control input-group weeklycirculardate" id="planActiveDate" name="planActiveDate" autocomplete="off" value="@(Model.PlanActiveDate.HasValue ?  Model.PlanActiveDate.Value.ToShortDateString():"")" placeholder="Plan Active Date" />
+                                    </div>
+                                </div>
+                                <div class="row" id="PlanAndCostDiv" style="display:@(Model.ActivePlan=="Paid"?"block":"none")">
+                                    <div class="col-lg-12 colMarginBottom">
+                                        <label>Plans</label>
+                                        <select id="PlanId" name="PlanId" class="form-control">
+                                            @foreach (var plan in ViewBag.Plans)
+                                            {
+                                                <option value="@plan.Value" @(Model.PlanId == Convert.ToInt32(plan.Value) ? "selected" : "")>@plan.Text</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if (Model.Id > 0)
+                {
+                    <div class="row colMarginBottom">
+                        <div class="col-lg-3">
+                            <h2 class="formHeading">Qr Code</h2>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="col-lg-3 colMarginBottom">
+                                            @if (!string.IsNullOrEmpty(Model.QrCodePath))
+                                            {
+                                                <img src="@Model.QrCodePath" height="100px" />
+                                            }
+                                            else
+                                            {
+                                                <span>---</span>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">&nbsp;</div>
+                    <div class="col-lg-9">
+                        <div class="row colMarginBottom">
+                            <div class="col-lg-6">
+                                <button class="submitBtn" type="button" id="btnSave">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

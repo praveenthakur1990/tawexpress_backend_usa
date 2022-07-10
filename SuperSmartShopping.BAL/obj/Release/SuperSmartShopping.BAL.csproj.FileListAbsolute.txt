@@ -1,0 +1,16 @@
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\SuperSmartShopping.BAL.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\SuperSmartShopping.BAL.pdb
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\Newtonsoft.Json.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\SuperSmartShopping.DAL.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\EntityFramework.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\Twilio.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\Microsoft.IdentityModel.Tokens.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\Microsoft.IdentityModel.Logging.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\SuperSmartShopping.DAL.pdb
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Release\SuperSmartShopping.BAL.csproj.AssemblyReference.cache
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Release\SuperSmartShopping.BAL.csproj.CoreCompileInputs.cache
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Release\SuperSmartShopping.BAL.csproj.CopyComplete
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Release\SuperSmartShopping.BAL.dll
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Release\SuperSmartShopping.BAL.pdb
+D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\bin\Release\QRCoder.dll

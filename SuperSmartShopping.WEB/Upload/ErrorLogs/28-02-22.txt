@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 28-02-2022 3.09.24 PM
+Error in GetOrder method(orderId=0, orderNo=, orderBy=, status=False, IsCurrentDate=SuperSmartShopping.DAL.ViewModels.PaginationModel, pageModel=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, connectionStr=, exception=RequestedDate)
+--------------------------------*End*------------------------------------------

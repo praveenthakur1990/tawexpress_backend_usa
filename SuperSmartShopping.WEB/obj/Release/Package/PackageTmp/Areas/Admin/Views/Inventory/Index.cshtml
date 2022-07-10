@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SuperSmartShopping.DAL.ViewModels.StockModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-6">
+                <h1>Stock Flow (@Model.Select(c=>c.ProductInfo.Name).FirstOrDefault())</h1>
+            </div>
+            <div class="col-lg-6 text-right">
+                <button class="btn btn-primary" onclick="window.location.href='@Url.Action("AddStock","Inventory",new {area="admin",@id=@ViewBag.ProductId })'"><i class="sm-add"></i>Add Stock</button>
+
+                <button class="btn btn-primary" onclick="window.location.href='@Url.Action("Index","Product",new {area="admin" })'"><i class="sm-add"></i>Back To Products</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-hover listTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr class="gradeA">
+                                    <td>@item.AddedDate</td>
+                                    <td>--</td>
+                                    <td>@item.Quantity</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3">
+                                    <div class="alert alert-danger text-center" role="alert">
+                                        No data found
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                @if (ViewBag.Pager.EndPage > 1)
+                {
+                    <ul class="pagination">
+                        @if (ViewBag.Pager.CurrentPage > 1)
+                        {
+                            <li>
+                                <a href="@Url.Action("Index","Inventory",new {area="admin", @searchStr=ViewBag.SearchStr })">First</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Inventory",new { area = "admin", @page =ViewBag.Pager.CurrentPage - 1, @searchStr=ViewBag.SearchStr})">Previous</a>
+                            </li>
+                        }
+
+                        @for (var page = ViewBag.Pager.StartPage; page <= ViewBag.Pager.EndPage; page++)
+                        {
+                            <li class="@(page == ViewBag.Pager.CurrentPage ? "active" : "")">
+                                <a href="@Url.Action("Index","Inventory",new { area = "admin", @page =page, @searchStr=ViewBag.SearchStr})">@page</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.Pager.CurrentPage < ViewBag.Pager.TotalPages)
+                        {
+                            <li>
+                                <a href="@Url.Action("Index","Inventory",new { area = "admin", @page =ViewBag.Pager.CurrentPage + 1, @searchStr=ViewBag.SearchStr})">Next</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Inventory",new { area = "admin", @page =ViewBag.Pager.TotalPages, @searchStr=ViewBag.SearchStr})">Last</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

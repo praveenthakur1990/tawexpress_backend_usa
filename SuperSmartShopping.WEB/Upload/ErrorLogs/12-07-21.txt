@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 7/12/2021 11:29:48 PM
+Error in GetSubCategoriesByCatId method(categoryId=7, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=keyfood_637608031400189564_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=TotalProductCount)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 7/12/2021 11:30:37 PM
+Error in GetSubCategoriesByCatId method(categoryId=7, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=keyfood_637608031400189564_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=TotalProductCount)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 7/12/2021 11:30:59 PM
+Error in GetSubCategoriesByCatId method(categoryId=7, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=keyfood_637608031400189564_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=TotalProductCount)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 7/12/2021 11:34:01 PM
+Error in GetSubCategoriesByCatId method(categoryId=7, connectionStr=Data Source=13.59.13.152\SQLEXPRESS;Initial Catalog=keyfood_637608031400189564_TE;persist security info=True;user id=sa;password=@Password!23;MultipleActiveResultSets=True;App=EntityFramework, exception=TotalProductCount)
+--------------------------------*End*------------------------------------------

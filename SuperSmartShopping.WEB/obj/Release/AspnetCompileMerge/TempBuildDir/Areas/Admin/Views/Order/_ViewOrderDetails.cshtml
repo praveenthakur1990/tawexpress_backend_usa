@@ -1,0 +1,185 @@
+﻿
+@model SuperSmartShopping.DAL.ViewModels.OrderInfoModel
+@{ int i = 1; }
+<div class="row orderStatusBar">
+    <div class="col-lg-7">
+        @if (Model.Status == "R")
+        {
+            <span class="rejectedBtn mx-2">Rejected</span>
+        }
+        @if (Model.Status == "A")
+        {
+            <span class="acceptedBtn">Accepted</span>
+        }
+
+        @if (Model.Status == "O")
+        {
+            <span class="outForDelBtn mx-2">Out for Delivery</span>
+        }
+        @if (Model.Status == "D")
+        {
+            <span class="deliveredBtn">Delivered</span>
+        }
+
+        @if (Model.Status == "D")
+        {
+            <button class="printBtn" type="button" onclick="print('@Model.OrderId')">Print</button>
+        }
+    </div>
+    <div class="col-lg-5 text-right">
+        @if (Model.Status == "D" || Model.Status == "R")
+        {
+
+        }
+        else
+        {
+            <form id="frmOrderStatus">
+                @Html.HiddenFor(m => m.OrderId)
+                <select class="orderStatusOption" name="status">
+                    <option value="">Order Status</option>
+                    @if (Model.Status == "A" && Model.OrderType == "H")
+                    {
+                        <option value="O">Out for delivery</option>
+                    }
+                    @if (Model.Status == "A" && Model.OrderType == "S")
+                    {
+                        <option value="Delivered">Delivered</option>
+                    }
+                    @if (Model.Status == "O")
+                    {
+                        <option value="Delivered">Delivered</option>
+                    }
+                </select>
+                <button class="printBtn" type="button" onclick="updateStatus()">Update Status</button>
+            </form>
+        }
+    </div>
+</div>
+
+<div class="row" id="printDiv">
+    <div class="col-lg-12">
+        <div class="track">
+            <div class="step active">
+                <span class="icon"> <i class="sm-received"></i> </span>
+                <span class="text">Order Placed</span>
+                <span class="date">@(Model.OrderedDate.HasValue ? Model.OrderedDate.Value.ToString("F"):"")</span>
+            </div>
+            @if (Model.Status == "R")
+            {
+                <div class="step active">
+                    <span class="icon"> <i class="sm-rejected"></i> </span>
+                    <span class="text">Rejected</span>
+                    <span class="date">@(Model.StatusChangedDate.HasValue ? Model.StatusChangedDate.Value.ToString("F"):"")</span>
+                </div>
+            }
+            else
+            {
+                if (Model.OrderType == "H")
+                {
+                    if (Model.OrderStatusLogs.Count() > 0)
+                    {
+                        <div class="step @(Model.OrderStatusLogs.Where(c=>c.Status=="O").FirstOrDefault()!=null ? "active":"")">
+                            <span class="icon"> <i class="sm-out-delivery"></i> </span>
+                            <span class="text">Out for Delivery</span>
+                            <span class="date">@(Model.OrderStatusLogs.Where(c => c.Status == "O").FirstOrDefault()!=null ? Model.OrderStatusLogs.Where(c => c.Status == "O").Select(c=>c.ChangedDateTime).FirstOrDefault().Value.ToString("F"):"--")</span>
+                        </div>
+                    }
+
+                }
+                if (Model.OrderStatusLogs.Count() > 0)
+                {
+                    <div class="step @(Model.OrderStatusLogs.Where(c => c.Status == "D").FirstOrDefault() != null ? "active" : "")">
+                        <span class="icon"> <i class="sm-done-delivered"></i> </span>
+                        <span class="text">Delivered</span>
+                        <span class="date">@(Model.OrderStatusLogs.Where(c => c.Status == "D").Select(c => c.ChangedDateTime).FirstOrDefault()!=null ? Model.OrderStatusLogs.Where(c => c.Status == "D").Select(c => c.ChangedDateTime).FirstOrDefault().Value.ToString("F"):"")</span>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-12 orderInvoiceDetail">
+                <h3>Order Details</h3>
+                <p><b>Order Number:</b> @Model.OrderNo</p>
+                <p><b>Order Date & time:</b> @Model.OrderedDate</p>
+                <p><b>Order Status:</b> @(Model.Status=="A" ? "Accepted": Model.Status=="R" ? "Rejected" : Model.Status=="C" ? "Cancelled" : Model.Status=="O" ? "Out for delivery" : "Delivered")</p>
+                <p><b>Order Type:</b> @(Model.OrderType=="S" ? "Self PickUp":"Home Delivery")</p>
+            </div>
+            <div class="col-lg-12 orderInvoiceDetail">
+                <h3>Payment Details</h3>
+                <p><b>Payment Status:</b>@Model.PaymentStatus</p>
+                <p><b>Transaction Date:</b>@Model.TransactionDate</p>
+                @if (Model.OrderType == "S")
+                {
+                    <p><b>PickUp Address:@ViewBag.Address</b></p>
+                }
+                else
+                {
+                    <p><b>Delivery Date & Time:</b>@Model.DeliveryDate.Value.ToShortDateString() between @Model.DeliveryStartTime.Value.ToShortTimeString()-@Model.DeliveryEndTime.Value.ToShortTimeString()</p>
+                }
+
+            </div>
+            <div class="col-lg-12 orderInvoiceDetail">
+                <h3>Customer Details</h3>
+                <p><b>Name:</b>@(Model.OrderType=="H" ? String.Format("{0} {1}", Model.FirstName, Model.LastName): String.Format("{0} {1}", Model.UserInfoModel.FirstName, Model.UserInfoModel.LastName))</p>
+                @if (Model.OrderType == "H")
+                {
+                    <p><b>Address:</b> @(string.Format("{0} {1} {2} {3}", Model.Address, Model.City, Model.State, Model.ZipCode))</p>
+                }
+                <p><b>Mobile:@Model.UserInfoModel.PhoneNumber</b></p>
+            </div>
+        </div>
+    </div><!--order detail-->
+    <div class="col-lg-12 orderListInvoice">
+        <div class="col-lg-12 border-bottom orderListHeading">
+            <div class="row">
+                <div class="col-lg-1"><b>S.No</b></div>
+                <div class="col-lg-5"><b>Item Name</b></div>
+                <div class="col-lg-2"><b>Price</b></div>
+                <div class="col-lg-2 text-center"><b>Quantity</b></div>
+                <div class="col-lg-2 text-right"><b>Amount</b></div>
+            </div>
+        </div>
+        @if (Model.OrderDetail.Count() > 0)
+        {
+            foreach (var item in Model.OrderDetail)
+            {
+                <div class="col-lg-12 orderItemList">
+                    <div class="row">
+                        <div class="col-lg-1">@i</div>
+                        <div class="col-lg-5">
+                            @item.ProductName
+                        </div>
+                        <div class="col-lg-2">@ViewBag.CurrencySymbol@item.Price</div>
+                        <div class="col-lg-2 text-center">@item.Qty</div>
+                        <div class="col-lg-2 text-right">@ViewBag.CurrencySymbol@item.TotalPrice</div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    @if (Model.OrderDetail.Count() > 0)
+    {
+        <div class="col-lg-12">
+            <div class="row orderAmountList">
+                <div class="col-lg-12 orderPopupMargin">
+                    <div class="col-lg-10 text-right">Sub-Total</div>
+                    <div class="col-lg-2 text-right">@ViewBag.CurrencySymbol@(Model.OrderDetail.Sum(c=>c.TotalPrice))</div>
+                </div>
+                <div class="col-lg-12 orderPopupMargin">
+                    <div class="col-lg-10 text-right">Tax Charges (@Model.TaxRate%)</div>
+                    <div class="col-lg-2 text-right">@String.Format("{0}{1}", ViewBag.CurrencySymbol, Model.TaxAmount)</div>
+                </div>
+                <div class="col-lg-12 orderPopupMargin">
+                    <div class="col-lg-10 text-right">Delivery Charges</div>
+                    <div class="col-lg-2 text-right">@String.Format("{0}{1}", ViewBag.CurrencySymbol, Model.DeliveryCharges)</div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="col-lg-10 text-right"><b>Total Amount</b></div>
+                    <div class="col-lg-2 text-right"><b>@ViewBag.CurrencySymbol@(Model.OrderDetail.Sum(c=>c.TotalPrice)+Model.TaxAmount+Model.DeliveryCharges)</b></div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,43 @@
+﻿@model SuperSmartShopping.DAL.Models.UnitMeasurement
+@{
+    ViewBag.Title = "AddUpdate";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <script src="~/Content/project/unitMeasurement.js"></script>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>@(Model.Id > 0 ? "Edit":"Add New") Unit Measurement</h1>
+                <p>Please fill all the required fields<span>(*)</span></p>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddUpdateUnitMeasurement" class="form-horizontal">
+                @Html.HiddenFor(c => c.Id)
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Name<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" name="name" maxlength="50" autocomplete="off" value="@Model.Name" placeholder="Enter Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Short Name<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="shortName" name="shortName" maxlength="10" autocomplete="off" value="@Model.ShortName" placeholder="Enter Short Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="submitBtn mr-5" type="button" onclick="addUpdate()">Save</button>
+                        <button class="cancelBtn" type="button" onclick="window.location.href='@Url.Action("Index","UnitMeasurement",new {area="admin" })'">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

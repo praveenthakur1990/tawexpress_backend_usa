@@ -1,0 +1,85 @@
+﻿@model SuperSmartShopping.DAL.ViewModels.WeeklyCircularModel
+@{
+    ViewBag.Title = "AddUpdate";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <script src="~/Content/project/weeklyCircular.js"></script>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>@(Model.Id > 0 ? "Edit":"Add New") Weekly Circular</h1>
+                <p>Please fill all the required fields<span>(*)</span></p>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddUpdateWeeklyCircular" class="form-horizontal">
+                @Html.HiddenFor(c => c.Id)
+                <input type="hidden" id="hdnUploadFile" value="@Model.PdfFilePath" />
+                <input type="hidden" id="hdnThubnailFile" value="@Model.ThumbnailImgPath" />
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Title<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="title" name="title" maxlength="100" autocomplete="off" value="@Model.Title" placeholder="Enter Title" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Start Date<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control input-group weeklycirculardate" id="startdate" name="startdate" maxlength="50" autocomplete="off" value="@(Model.StartDate==null ? string.Empty:Model.StartDate.Value.ToShortDateString())" placeholder="Enter Start Date" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">End Date<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control input-group weeklycirculardate" id="enddate" name="enddate" maxlength="50" autocomplete="off" value="@(Model.EndDate==null ? string.Empty:Model.EndDate.Value.ToShortDateString())" placeholder="Enter End Date" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Thumbnail Image</label>
+                    <div class="col-lg-4">
+                        <div class="upload-btn-wrapper">
+                            <button class="uploadBtn">Upload</button>
+                            <input type="file" class="form-control" id="thumbnailPath" name="thumbnailPath" onchange="readThubnailImage(this)" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="preview-thumbnail-image upload-btn-wrapper" style="display:@(!string.IsNullOrEmpty(Model.ThumbnailImgPath) ? "block":"none")">
+                            <img id="thumbnailImg" src="@(!string.IsNullOrEmpty(Model.ThumbnailImgPath)? Model.ThumbnailImgPath:string.Empty)" width="100px" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Pdf</label>
+                    <div class="col-lg-4">
+                        <div class="upload-btn-wrapper">
+                            <button class="uploadBtn">Upload</button>
+                            <input type="file" class="form-control" id="pdfPath" name="pdfPath" onchange="readImage(this)" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="preview-image-FSSAI upload-btn-wrapper" style="display:@(Model.PdfFilePath!=null && Model.PdfFilePath!=string.Empty ? "block":"none")">
+                            <iframe src="@(!string.IsNullOrEmpty(Model.PdfFilePath)? Model.PdfFilePath:string.Empty)" height="100%" contenteditable="true" width="100%"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="submitBtn mr-5" type="button" onclick="addUpdate()">Save</button>
+                        <button class="cancelBtn" type="button" onclick="window.location.href='@Url.Action("Index","WeeklyCircular",new {area="admin" })'">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+﻿@model SuperSmartShopping.DAL.ViewModels.SpecialOfferModel
+@{
+    ViewBag.Title = "ViewProduct";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section scripts{
+    <script src="~/Content/project/specialOffer.js"></script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-6">
+                <h1>View Product</h1>
+                <h1>@Model.Title (@(String.Format("{0}-{1}", Model.StartDate.Value.ToShortDateString(), Model.EndDate.Value.ToShortDateString()))</h1>
+            </div>
+            <div class="col-lg-6 text-right">
+                <button class="btn btn-primary" onclick="openAddUpdateProduct('@Model.Id',0,0,0)"><i class="sm-add"></i>Add New</button>
+                <button class="btn btn-primary" onclick="window.location.href = '@Url.Action("Index","SpecialOffer",new {area="admin",@id=@Model.Id })'"><i class="sm-add"></i>Back To List</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-hover listTable">
+                    <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Offer Type</th>
+                            <th>Offer Value</th>
+                            <th>Final Value</th>
+                            <th>Category Name</th>
+                            <th>SubCategory Name</th>
+                            <th class="text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.ProductList.Count() > 0)
+                        {
+                            foreach (var item in Model.ProductList)
+                            {
+                                <tr class="gradeA">
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(item.ProductImage))
+                                        {
+                                            <a href="@item.ProductImage" target="_blank">
+                                                <img src="@item.ProductImage" width="50px" />
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <span>---</span>
+                                        }
+                                    </td>
+                                    <td>@item.ProductName</td>
+                                    <td>@ViewBag.CurrencySymbol@item.Price</td>
+                                    <td>@(item.OfferType=="0" ?"Buy one get free":item.OfferType=="1" ? "Discount Percentage" : "Amount")</td>
+                                    <td>@(item.OfferType=="2" ? @ViewBag.CurrencySymbol:"")@item.FinalOfferValue </td>
+                                    <td>@(item.OfferType=="2" || item.OfferType=="1" ? @ViewBag.CurrencySymbol:"")@item.FinalValue</td>
+                                    <td>@item.CategoryName</td>
+                                    <td>@item.SubCategoryName</td>
+                                    <td class="text-right">
+                                        <div class="actionBg">
+                                            <div class="dropdown">
+                                                <button type="button" class="listActionBtn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Action <span class="caret"></span>
+                                                </button>
+                                                <div class="dropdown-menu actionDropWidth dropdown-menu-right">
+                                                    <ul>
+                                                        <li><a href="javascript:void(0);" onclick="openAddUpdateProduct(@item.SpecialOfferId, @item.CategoryId, @item.SubCategoryId,@item.SpecialOfferCatId)"><i class="sm-edit"></i> Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="9">
+                                    <div class="alert alert-danger text-center" role="alert">
+                                        No data found
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

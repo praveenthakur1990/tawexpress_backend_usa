@@ -1,0 +1,91 @@
+﻿@model SuperSmartShopping.DAL.Models.Category
+@{
+    ViewBag.Title = "AddUpdate";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <script src="~/Content/project/category.js"></script>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>@(Model.Id > 0 ? "Edit":"Add New") Category</h1>
+                <p>Please fill all the required fields<span>(*)</span></p>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddUpdateCategory" class="form-horizontal">
+                @Html.HiddenFor(c => c.Id)
+                <input type="hidden" id="hdnImagePath" value="@Model.ImagePath" />
+                <input type="hidden" id="hdnBannerImgPath" value="@Model.BannerImg" />
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Select Parent</label>
+                    <div class="col-sm-8">
+                        <select id="ParentId" name="ParentId" class="form-control">
+                            <option value="">Select Category</option>
+                            @foreach (var plan in ViewBag.Categories)
+                            {
+                                <option value="@plan.Value" @(Model.ParentId == Convert.ToInt32(plan.Value) ? "selected" : "")>@plan.Text</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Name<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" name="name" maxlength="50" autocomplete="off" value="@Model.Name" placeholder="Enter Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" id="description" name="description" placeholder="Enter Description" maxlength="1000" style="height: 200px;">@Model.Description</textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Image</label>
+                    <div class="col-lg-4">
+                        <div class="upload-btn-wrapper">
+                            <button class="uploadBtn">Upload item image</button>
+                            <input type="file" class="form-control" id="imagePath" name="imagePath" onchange="readImage(this)" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="preview-image-FSSAI upload-btn-wrapper" style="display:@(Model.ImagePath!=null && Model.ImagePath!=string.Empty ? "block":"none")">
+                            <a id="linkUploadFilePath" href="@(Model.ImagePath!=null && Model.ImagePath!=string.Empty ? Model.ImagePath:"")" target="_blank"> <img src="@Model.ImagePath" alt="image" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Banner Image</label>
+                    <div class="col-lg-4">
+                        <div class="upload-btn-wrapper">
+                            <button class="uploadBtn">Upload item image</button>
+                            <input type="file" class="form-control" id="bannerPath" name="bannerPath" onchange="readBannerImage(this)" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="preview-banner-image upload-btn-wrapper" style="display:@(Model.BannerImg!=null && Model.BannerImg!=string.Empty ? "block":"none")">
+                            <a id="linkUploadBannerFilePath" href="@(Model.BannerImg!=null && Model.BannerImg!=string.Empty ? Model.BannerImg:"")" target="_blank"> <img src="@Model.BannerImg" alt="image" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Priority Index</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control numbers-only" id="PriorityIndex" name="PriorityIndex" placeholder="Set Priority" value="@Model.PriorityIndex" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="submitBtn mr-5" type="button" id="btnSaveCategory">Save</button>
+                        <button class="cancelBtn" type="button" onclick="window.location.href='@Url.Action("Index","Category",new {area="admin" })'">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

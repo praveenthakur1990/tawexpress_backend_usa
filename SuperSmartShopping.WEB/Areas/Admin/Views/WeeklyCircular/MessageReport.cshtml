@@ -1,0 +1,101 @@
+﻿@model IEnumerable<SuperSmartShopping.DAL.ViewModels.MessageResourcesViewModel>
+@{
+    ViewBag.Title = "MessageReport";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    int i = 1;
+}
+@section scripts{
+    <script src="~/Content/project/weeklyCircular.js"></script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-6">
+                <h1>Message Sent Report</h1>
+            </div>
+            <div class="col-lg-8">
+                <input type="text" class="form-control" id="txtSearch" name="txtSearch" placeholder="Search mobile number, status" value="@ViewBag.SearchStr" />
+            </div>
+            <div class="col-lg-4">
+                <button class="viewButton" type="button" onclick="searchMessageReport()">View</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-hover listTable">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>To</th>
+                            <th>Status</th>
+                            <th>Date Created</th>
+                            <th>Date Sent</th>
+                            <th>Error Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr class="gradeA">
+                                    <td>@i</td>
+                                    <td>@item.To</td>
+                                    <td>@item.Status</td>
+                                    <td>@item.DateCreated</td>
+                                    <td>@item.DateSent</td>
+                                    <td>@(!string.IsNullOrEmpty(item.ErrorMessage) ? item.ErrorMessage:"---")</td>
+                                </tr>
+
+                                i++;
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="7">
+                                    <div class="alert alert-danger text-center" role="alert">
+                                        No data found
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @if (ViewBag.Pager.EndPage > 1)
+                {
+                    <ul class="pagination">
+                        @if (ViewBag.Pager.CurrentPage > 1)
+                        {
+                            <li>
+                                <a href="@Url.Action("MessageReport","WeeklyCircualar",new {area="admin", @searchStr=ViewBag.SearchStr })">First</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("MessageReport","WeeklyCircualar",new { area = "admin", @page =ViewBag.Pager.CurrentPage - 1, @searchStr=ViewBag.SearchStr})">Previous</a>
+                            </li>
+                        }
+
+                        @for (var page = ViewBag.Pager.StartPage; page <= ViewBag.Pager.EndPage; page++)
+                        {
+                            <li class="@(page == ViewBag.Pager.CurrentPage ? "active" : "")">
+                                <a href="@Url.Action("MessageReport","WeeklyCircualar",new { area = "admin", @page =page, @searchStr=ViewBag.SearchStr})">@page</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.Pager.CurrentPage < ViewBag.Pager.TotalPages)
+                        {
+                            <li>
+                                <a href="@Url.Action("MessageReport","WeeklyCircualar",new { area = "admin", @page =ViewBag.Pager.CurrentPage + 1, @searchStr=ViewBag.SearchStr})">Next</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("MessageReport","WeeklyCircualar",new { area = "admin", @page =ViewBag.Pager.TotalPages, @searchStr=ViewBag.SearchStr})">Last</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

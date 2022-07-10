@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 02-10-2021 1.46.03 PM
+Error in AddUpdateCategory method(model=SuperSmartShopping.DAL.Models.Category, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@Name nvarchar(4000),@Description nvarchar(4000),@Image' expects the parameter '@Name', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 02-10-2021 8.52.17 PM
+Error in AddUpdate method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=The parameterized query '(@Id int,@Title nvarchar(12),@StartDate datetime,@EndDate dateti' expects the parameter '@PdfFilePath', which was not supplied.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 02-10-2021 10.12.04 PM
+Error in AddUpdate method(model=SuperSmartShopping.DAL.ViewModels.WeeklyCircularModel, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Object cannot be cast from DBNull to other types.)
+--------------------------------*End*------------------------------------------

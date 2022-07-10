@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "AddAdvertisementImage";
+    Layout = "~/Areas/SecurePanel/Views/Shared/_LayoutSecurePanel.cshtml";
+}
+@section scripts{
+    <script src="~/Content/project/basicProfile.js"></script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>Add New Advertisement</h1>
+                <p>Please fill all the required fields<span style="color:red">(*)</span></p>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddUpdateadvImages" class="form-horizontal" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Basic Details</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-12">
+                                        <label>Upload</label>
+                                        <div class="upload-btn-wrapper">
+                                            <button class="uploadBtn">Upload item image</button>
+                                            <input type="file" id="advImagePath" name="advImagePath" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">&nbsp;</div>
+                    <div class="col-lg-9">
+                        <div class="row colMarginBottom">
+                            <div class="col-lg-6">
+                                <button class="submitBtn" type="button" onclick="addUpdatePlan()">Save changes</button>
+                                <button class="submitBtn" type="button" onclick="window.location.href = '@Url.Action("Index","Plan",new {area="securepanel" })'">Back To List</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

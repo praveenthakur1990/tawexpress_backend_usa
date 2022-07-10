@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.18.44 PM
+Error in GetProductByCategoryIdAPP method(categoryId=10, subCategoryIds=15, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=5, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=6, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=3, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=10, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=7, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=4, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=1, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.19.14 PM
+Error in GetProductForDashboard method(categoryId=9, limit=18, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.20.32 PM
+Error in GetProductByCategoryIdAPP method(categoryId=3, subCategoryIds=12, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.20.35 PM
+Error in GetProductByCategoryIdAPP method(categoryId=3, subCategoryIds=14, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.20.41 PM
+Error in GetProductByCategoryIdAPP method(categoryId=3, subCategoryIds=13, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.20.41 PM
+Error in GetProductByCategoryIdAPP method(categoryId=3, subCategoryIds=11, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 12-11-2021 1.20.43 PM
+Error in GetProductByCategoryIdAPP method(categoryId=3, subCategoryIds=15, brandIds=, connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=walmart_637633179841998825_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------

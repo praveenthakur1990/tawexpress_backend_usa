@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 09-02-2022 11.46.04 PM
+Error in AddUpdateRider method(obj=SuperSmartShopping.DAL.ViewModels.RiderModel, exception=Error converting value "Name 1231312312 is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 35.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 09-02-2022 11.46.43 PM
+Error in AddUpdateRider method(obj=SuperSmartShopping.DAL.ViewModels.RiderModel, exception=Error converting value "Name 1231312312 is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 35.)
+--------------------------------*End*------------------------------------------

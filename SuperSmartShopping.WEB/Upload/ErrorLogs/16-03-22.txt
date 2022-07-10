@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.21.13 PM
+Error in MoveNext method(exception=UserId not found.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.45.18 PM
+Error in AddUpdate method(frm=chillirest.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.45.18 PM
+Error in AddUpdate method(frm=https://chillirest.localhost:443/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.45.18 PM
+Error in AddUpdate method(frm=https://chillirest.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.46.59 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.50.49 PM
+Error in AddUpdate method(frm=chillirest1.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.50.49 PM
+Error in AddUpdate method(frm=https://chillirest1.localhost:443/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.50.49 PM
+Error in AddUpdate method(frm=https://chillirest1.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 9.56.41 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=chillirest_637830639313074563_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 10.37.04 PM
+Error in AddUpdate method(frm=helloworld.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 10.37.04 PM
+Error in AddUpdate method(frm=https://helloworld.localhost:443/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 10.37.04 PM
+Error in AddUpdate method(frm=https://helloworld.localhost/#/subscriber/index, exception=Exception of type 'System.Exception' was thrown.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 16-03-2022 11.08.22 PM
+Error in SendSMSNotification method(toNumber=, message=, exception=Authenticate)
+--------------------------------*End*------------------------------------------

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 01-08-2021 11.07.12 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=teststroe07_637608612329434691_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------

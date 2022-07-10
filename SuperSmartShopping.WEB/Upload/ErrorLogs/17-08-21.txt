@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 3.50.30 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name cannot be null or empty." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 31.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 3.50.56 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name cannot be null or empty." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 31.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 3.51.34 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name cannot be null or empty." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 31.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 3.53.22 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name cannot be null or empty." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 31.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 3.56.56 PM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 3.56.57 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 3.58.50 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name ramastore@yopmail.com is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 46.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.03.40 PM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=One or more errors occurred.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.04.43 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name ramastore@yopmail.com is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 46.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.04.57 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name ramastore@yopmail.com is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 46.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.08.58 PM
+Error in AddUpdateStore method(obj=SuperSmartShopping.DAL.ViewModels.StoreModel, exception=Error converting value "Name ramastore@yopmail.com is already taken." to type 'SuperSmartShopping.DAL.ViewModels.Errorresponse'. Path '', line 1, position 46.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.33.22 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=reliancestore_637648131935089537_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.33.25 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=reliancestore_637648131935089537_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.33.30 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=reliancestore_637648131935089537_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.33.47 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=reliancestore_637648131935089537_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.34.01 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=reliancestore_637648131935089537_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.34.21 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=reliancestore_637648131935089537_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 17-08-2021 4.36.17 PM
+Error in GetStore method(connectionStr=Data Source=DESKTOP-436157I;Initial Catalog=reliancestore_637648131935089537_TE;persist security info=True;user id=sa;password=praveen@786;MultipleActiveResultSets=True;App=EntityFramework, exception=Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.)
+--------------------------------*End*------------------------------------------

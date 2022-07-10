@@ -1,0 +1,83 @@
+﻿@model SuperSmartShopping.DAL.ViewModels.ProductVarientsModel
+@{
+    ViewBag.Title = "AddUpdate";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <link href="~/Content/theme/plugins/bootstrap-switch/bootstrap-switch.min.css" rel="stylesheet" />
+    <script src="~/Content/theme/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
+    <script src="~/Content/project/productVarients.js"></script>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>@(Model.Id > 0 ? "Edit":"Add New") Product Varient</h1>
+                <p>Please fill all the required fields <span>(*)</span></p>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddUpdateProductVarient" class="form-horizontal">
+                @Html.HiddenFor(c => c.Id)
+                <input type="hidden" id="hdnImagePath" value="@Model.Image" />
+                <input type="hidden" id="hdnisPublished" value="@(Model.IsPublished==true ?"true":"false")" />
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Select Product<span class="asterisk">*</span></label>
+                    <div class="col-sm-4">
+                        <select id="ProductId" name="ProductId" class="form-control">
+                            <option value="">Select Category</option>
+                            @foreach (var plan in ViewBag.VarientProducts)
+                            {
+                                <option value="@plan.Value" @(Model.ProductId == Convert.ToInt32(plan.Value) ? "selected" : "")>@plan.Text</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Name<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="name" name="name" maxlength="50" autocomplete="off" value="@Model.Name" placeholder="Enter Name" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Price<span class="asterisk">*</span></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control numbers-only" id="Price" name="Price" maxlength="50" autocomplete="off" value="@Model.Price" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Image</label>
+                    <div class="col-lg-4">
+                        <div class="upload-btn-wrapper">
+                            <button class="uploadBtn">Upload item image</button>
+                            <input type="file" class="form-control" id="imagePath" name="imagePath" onchange="readImage(this)" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="preview-image-FSSAI upload-btn-wrapper" style="display:@(Model.Image!=null && Model.Image!=string.Empty ? "block":"none")">
+                            <a id="linkUploadFilePath" href="@(Model.Image!=null && Model.Image!=string.Empty ? Model.Image:"")" target="_blank"> <img src="@Model.Image" alt="image" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Do you want this menu item published?</label>
+                    <div class="col-sm-8">
+                        <input type="checkbox" name="IsPublish" value="@Model.IsPublished" class="switch" @(Model.IsPublished == true ? "Checked" : "") />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="submitBtn mr-5" type="button" onclick="addUpdateProductVarient()">Save</button>
+                        <button class="cancelBtn" type="button" onclick="window.location.href='@Url.Action("Index","ProductVarient",new {area="admin" })'">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

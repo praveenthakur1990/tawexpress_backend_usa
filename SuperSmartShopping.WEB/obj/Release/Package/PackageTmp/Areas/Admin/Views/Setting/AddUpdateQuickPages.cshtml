@@ -1,0 +1,79 @@
+﻿@model IEnumerable<SuperSmartShopping.DAL.ViewModels.QuickPageModel>
+@{
+    ViewBag.Title = "AddUpdateQuickPages";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <link href="~/Content/theme/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/theme/plugins/summernote/summernote.css" rel="stylesheet" />
+    <link href="~/Content/theme/plugins/summernote/summernote-bs3.css" rel="stylesheet" />
+    <script src="~/Content/project/quickLinks.js"></script>
+    <script src="~/Content/theme/plugins/summernote/summernote.min.js"></script>
+}
+<div class="row pageTitle">
+    <div class="col-lg-12">
+        <h1>Setting</h1>
+        <p>This page allow you to change configuration what you have made</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox-content settingSideNav">
+                    @{Html.RenderPartial("_SettingMenu");}
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="ibox-content wrapperPadding">
+                    <form id="frmAddUpdateQuickPages" class="form-horizontal">
+                        <input type="hidden" value="@ViewBag.UserId" id="hdnUserId" />
+                        <div class="profilViewBottom">
+                            <h2 class="formHeading">Quick Pages</h2>
+                            <p>Connect your webiste static pages links</p>
+                        </div>
+                        <div class="accordion" id="accordionExample">
+                            @foreach (var item in Model)
+                            {
+                                <div class="form-group quickLink" data-content="@item.Id">
+                                    <div class="col-lg-12">
+                                        <label class="pageName">@item.Name</label>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control validate" id="name_@item.Id" name="name_@item.Id" maxlength="200" autocomplete="off" value="@item.Link" placeholder="Enter @item.Name url" />
+                                    </div>
+                                    <div class="col-lg-2 text-center" style="padding: 8px 0px 0px 0px">
+                                        <label class="switch">
+                                            <input type="checkbox" class="" id="IsActive_@item.Id" name="IsActive_@item.Id" value="@item.IsActive" @(item.IsActive == true ? "checked" : "") />
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="card col-lg-12">
+                                        <div class="card-header" id="div_@item.Id">
+                                            <h2 class="mb-0">
+                                                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse_@item.Id"><i class="fa fa-plus"></i> Add Custom Content</button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapse_@item.Id" class="collapse" aria-labelledby="div_@item.Id" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <textarea class="form-control summernote" name="description_@item.Id" placeholder="Description" style="margin-top:10px">@item.PageContent</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <button class="submitBtn mr-5" type="button" onclick="saveQuickPages()">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

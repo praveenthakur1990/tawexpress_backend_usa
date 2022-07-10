@@ -1,0 +1,128 @@
+﻿@model SuperSmartShopping.DAL.ViewModels.RiderModel
+@{
+    ViewBag.Title = "AddUpdateRider";
+    Layout = "~/Areas/SecurePanel/Views/Shared/_LayoutSecurePanel.cshtml";
+}
+@section scripts{
+    <link href="~/Content/theme/plugins/chosen/chosen.css" rel="stylesheet" />
+    <script src="~/Content/theme/plugins/chosen/chosen.jquery.js"></script>
+    <link href="~/Content/theme/plugins/bootstrap-switch/bootstrap-switch.min.css" rel="stylesheet" />
+    <script src="~/Content/theme/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
+    <script src="~/Content/project/rider.js"></script>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-12">
+                <h1>Add New Rider</h1>
+                <p>Please fill all the required fields<span style="color:red">(*)</span></p>
+            </div>
+        </div>
+        <div class="ibox-content wrapperPadding">
+            <form id="frmAddUpdateRider" class="form-horizontal">
+                @Html.HiddenFor(c => c.Id)
+                @Html.HiddenFor(c => c.StoreIds)
+                <input type="hidden" id="hdnStoreIds" value="@Model.StoreIds" />
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Basic Details</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-4">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" maxlength="50" autocomplete="off" value="@Model.FirstName" />
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" maxlength="50" autocomplete="off" value="@Model.LastName" />
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label>Gender</label>
+                                        <select class="form-control" id="ddlGender" name="ddlGender">
+                                            <option value="">Select</option>
+                                            <option value="M" @(Model.Gender == "M" ? "selected" : "")>Male</option>
+                                            <option value="F" @(Model.Gender == "F" ? "selected" : "")>Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-6">
+                                        <label>Mobile No</label>
+                                        <input type="text" class="form-control number-format" id="mobile" name="mobile" maxlength="50" autocomplete="off" value="@Model.Mobile" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>Email Address</label>
+                                        <input type="text" class="form-control" id="emailAddress" name="emailAddress" maxlength="200" autocomplete="off" value="@Model.EmailAddress" />
+                                    </div>
+                                </div>
+
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-12">
+                                        <label>Contact Address</label>
+                                        <input type="text" class="form-control" id="contactAddress" name="contactAddress" maxlength="100" autocomplete="off" value="@Model.ContactAddress" />
+                                    </div>
+                                </div>
+
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-4">
+                                        <label>City</label>
+                                        <input type="text" class="form-control" id="city" name="city" maxlength="50" autocomplete="off" value="@Model.City" />
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label>State</label>
+                                        <input type="text" class="form-control" id="state" name="state" maxlength="50" autocomplete="off" value="@Model.State" />
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <label>ZipCode</label>
+                                        <input type="text" class="form-control" id="zipCode" name="zipCode" maxlength="10" autocomplete="off" value="@Model.ZipCode" />
+                                    </div>
+                                </div>
+                                                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">
+                        <h2 class="formHeading">Assign Store</h2>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row colMarginBottom">
+                                    <div class="col-lg-12">
+                                        <label>Select Store</label>
+                                        <select data-placeholder="Choose a Store..." class="chosen-select form-control" multiple>
+                                            @foreach (var tag in ViewBag.Stores)
+                                            {
+                                                <option value="@tag.Value">@tag.Text</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row colMarginBottom">
+                    <div class="col-lg-3">&nbsp;</div>
+                    <div class="col-lg-9">
+                        <div class="row colMarginBottom">
+                            <div class="col-lg-6">
+                                <button class="submitBtn" type="button" onclick="addUpdate()">Save changes</button>
+                                <button class="submitBtn" type="button" onclick="window.location.href = '@Url.Action("Index","Rider",new {area="securepanel" })'">Back To List</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+﻿@model IEnumerable<SuperSmartShopping.DAL.ViewModels.SpecialOfferModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section scripts{
+    <script src="~/Content/project/specialOffer.js"></script>
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row pageTitle">
+            <div class="col-lg-6">
+                <h1>Special Offer List</h1>
+            </div>
+            <div class="col-lg-6 text-right">
+                <button class="btn btn-primary" onclick="window.location.href='@Url.Action("AddUpdate","SpecialOffer",new {area="admin",@id=0 })'"><i class="sm-add"></i>Add New</button>
+            </div>
+            <div class="col-lg-8">
+                <input type="text" class="form-control" id="txtSearch" name="txtSearch" placeholder="Search title" value="@ViewBag.SearchStr" />
+            </div>
+            <div class="col-lg-4">
+                <button class="viewButton" type="button" onclick="btnGetSpecialOfferSearch()">View</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-hover listTable">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Banner Image</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Created Date</th>
+                            <th class="text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                        <tr class="gradeA">
+                            <td>@item.Title</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.BannerImagePath))
+                                {
+
+                                    <a href="@item.BannerImagePath" target="_blank"> <img src="@item.BannerImagePath" height="100px" /></a>
+                                }
+                                else
+                                {
+                                    <span>---</span>
+                                }
+                            </td>
+                            <td>@item.StartDate.Value.ToShortDateString()</td>
+                            <td>@item.EndDate.Value.ToShortDateString()</td>
+                            <td>@item.CreatedDate</td>
+                            <td class="text-right">
+                                <div class="actionBg">
+                                    <div class="dropdown">
+                                        <button type="button" class="listActionBtn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Action <span class="caret"></span>
+                                        </button>
+                                        <div class="dropdown-menu actionDropWidth dropdown-menu-right">
+                                            <ul>
+                                                <li><a href="@Url.Action("AddUpdate","SpecialOffer",new {area="admin",id=item.Id })"><i class="sm-edit"></i> Edit</a></li>
+                                                <li><a href="@Url.Action("ViewProduct","SpecialOffer",new {area="admin",id=item.Id })"><i class="sm-add"></i> View Product</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="5">
+                                    <div class="alert alert-danger text-center" role="alert">
+                                        No data found
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @if (ViewBag.Pager.EndPage > 1)
+                {
+                    <ul class="pagination">
+                        @if (ViewBag.Pager.CurrentPage > 1)
+                        {
+                            <li>
+                                <a href="@Url.Action("Index","SpecialOffer",new {area="admin", @searchStr=ViewBag.SearchStr })">First</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","SpecialOffer",new { area = "admin", @page =ViewBag.Pager.CurrentPage - 1, @searchStr=ViewBag.SearchStr})">Previous</a>
+                            </li>
+                        }
+
+                        @for (var page = ViewBag.Pager.StartPage; page <= ViewBag.Pager.EndPage; page++)
+                        {
+                            <li class="@(page == ViewBag.Pager.CurrentPage ? "active" : "")">
+                                <a href="@Url.Action("Index","SpecialOffer",new { area = "admin", @page =page, @searchStr=ViewBag.SearchStr})">@page</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.Pager.CurrentPage < ViewBag.Pager.TotalPages)
+                        {
+                            <li>
+                                <a href="@Url.Action("Index","SpecialOffer",new { area = "admin", @page =ViewBag.Pager.CurrentPage + 1, @searchStr=ViewBag.SearchStr})">Next</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","SpecialOffer",new { area = "admin", @page =ViewBag.Pager.TotalPages, @searchStr=ViewBag.SearchStr})">Last</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

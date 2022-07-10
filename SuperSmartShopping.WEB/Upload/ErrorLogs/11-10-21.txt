@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------------
+Log Written Date: 11-10-2021 11.39.31 AM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=String was not recognized as a valid DateTime.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 11-10-2021 11.40.12 AM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=Object reference not set to an instance of an object.)
+--------------------------------*End*------------------------------------------
+-------------------------------------------------------------------------------------
+Log Written Date: 11-10-2021 12.09.29 PM
+Error in AddUpdate method(frm=System.Web.Mvc.FormCollection, exception=Object reference not set to an instance of an object.)
+--------------------------------*End*------------------------------------------
