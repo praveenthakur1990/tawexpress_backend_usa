@@ -535,11 +535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\TawMediaGroup\\TawExpress\\SuperSmartShoppingWEB\\SuperSmartShopping.DAL\\SuperSmartShopping.DAL.csproj",
+      "projectUniqueName": "D:\\Projects\\TawMediaGroup\\TawExpress\\Environment\\USA\\tawexpress_backend_usa\\SuperSmartShopping.DAL\\SuperSmartShopping.DAL.csproj",
       "projectName": "SuperSmartShopping.DAL",
-      "projectPath": "D:\\Projects\\TawMediaGroup\\TawExpress\\SuperSmartShoppingWEB\\SuperSmartShopping.DAL\\SuperSmartShopping.DAL.csproj",
+      "projectPath": "D:\\Projects\\TawMediaGroup\\TawExpress\\Environment\\USA\\tawexpress_backend_usa\\SuperSmartShopping.DAL\\SuperSmartShopping.DAL.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\TawMediaGroup\\TawExpress\\SuperSmartShoppingWEB\\SuperSmartShopping.DAL\\obj\\",
+      "outputPath": "D:\\Projects\\TawMediaGroup\\TawExpress\\Environment\\USA\\tawexpress_backend_usa\\SuperSmartShopping.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

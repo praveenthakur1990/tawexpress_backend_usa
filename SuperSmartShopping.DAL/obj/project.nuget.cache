@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H9bHEgj6XOvX1tpF4nbad+jfN53h/Z4EvA+3LB5Wz7dwzwvu0ixL4LchpoFEKiX47t6q+ZnpvXc5oJYV7QqjeA==",
+  "dgSpecHash": "V2yUp9JX4dlTIqu7FKtoDyJZ6HGnUmKdiqWxgJ2gCpWX0GdlZOi1oqX9WoXwQ1c8+x+XPZhoiToLHlqOwS2wkw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\TawMediaGroup\\TawExpress\\SuperSmartShoppingWEB\\SuperSmartShopping.DAL\\SuperSmartShopping.DAL.csproj",
+  "projectFilePath": "D:\\Projects\\TawMediaGroup\\TawExpress\\Environment\\USA\\tawexpress_backend_usa\\SuperSmartShopping.DAL\\SuperSmartShopping.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.identitymodel.logging\\1.1.2\\microsoft.identitymodel.logging.1.1.2.nupkg.sha512",

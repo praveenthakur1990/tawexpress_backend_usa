@@ -44,3 +44,16 @@ D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BA
 D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.dll
 D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.pdb
 D:\Projects\TawMediaGroup\TawExpress\SuperSmartShoppingWEB\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.csproj.AssemblyReference.cache
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\SuperSmartShopping.BAL.dll
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\SuperSmartShopping.BAL.pdb
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\SuperSmartShopping.DAL.dll
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\Twilio.dll
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\EntityFramework.dll
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\QRCoder.dll
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\bin\Debug\SuperSmartShopping.DAL.pdb
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.csproj.AssemblyReference.cache
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.csproj.CoreCompileInputs.cache
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.csproj.CopyComplete
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.dll
+D:\Projects\TawMediaGroup\TawExpress\Environment\USA\tawexpress_backend_usa\SuperSmartShopping.BAL\obj\Debug\SuperSmartShopping.BAL.pdb

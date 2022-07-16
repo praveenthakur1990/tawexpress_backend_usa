@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tmQCeKjOfs3lIFmxKhJReDQ8VDFh/wkMkSg4ijBBtSHSOwunTY3B5hs7/TcQX1cLHFpZJ4Zhyp9UpzfOvJqbjw==",
+  "dgSpecHash": "+U3CjzycfRc84TE+Fj4kxqxooCPqC0AJED25iH8TiEHNqtkaQxcFF5XZOF+sTC4en0UlWtYGcUwwPm/yNirfUQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\TawMediaGroup\\TawExpress\\SuperSmartShoppingWEB\\SuperSmartShopping.BAL\\SuperSmartShopping.BAL.csproj",
+  "projectFilePath": "D:\\Projects\\TawMediaGroup\\TawExpress\\Environment\\USA\\tawexpress_backend_usa\\SuperSmartShopping.BAL\\SuperSmartShopping.BAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
   ],
